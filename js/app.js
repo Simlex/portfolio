@@ -42,7 +42,7 @@ $(function () {
     }); */
     
     $('.design__filter--main').on('click', function() {
-        $('.design__filter--sub').toggle(100); 
+        $('.design__filter--sub').toggle(200); 
     });
 
     $('.filter-uiux').on('click', function() {
