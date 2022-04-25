@@ -195,6 +195,7 @@ path {
             &:hover {
                 background-color: var(--orange);
                 color: var(--white);
+                background: linear-gradient(90deg, #F9A31A 0%, #E48C00 102.75%);
             }
                 } 
             }
@@ -319,6 +320,7 @@ path {
 
         .reach {
             display: inline-flex;
+            justify-content: center;
             margin-top: 2.5rem; //40px
             border: $border;
             padding: 0.5rem 0.75rem; //8px 12px
@@ -327,14 +329,14 @@ path {
             color: var(--orange);
 
             &:hover {
-                background-color: var(--orange);
+                letter-spacing: 0.125rem; //2px
+                background: linear-gradient(90deg, #F9A31A 0%, #E48C00 102.75%);
                 color: var(--white);
             }
         }
 
         &--cta {
-            display: flex;
-            flex-direction: column;
+            display: inline-flexbox;
         }
         
      }
@@ -521,7 +523,7 @@ path {
             }
 
             svg {
-                margin-left: 90px;
+                margin-left: 6px;
             }
         }
 
