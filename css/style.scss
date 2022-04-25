@@ -323,7 +323,7 @@ path {
             border: $border;
             padding: 0.5rem 0.75rem; //8px 12px
             border: 1px solid var(--orange);
-            border-radius: 0.375rem; //6px
+            //border-radius: 0.375rem; //6px
             color: var(--orange);
 
             &:hover {
@@ -332,6 +332,10 @@ path {
             }
         }
 
+        &--cta {
+            display: flex;
+            flex-direction: column;
+        }
         
      }
  }
