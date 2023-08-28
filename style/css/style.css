@@ -1091,6 +1091,11 @@ section {
   margin: 0 auto;
   margin-top: 32px;
 }
+@media screen and (max-width: 768px) {
+  .learn .mediaCard {
+    width: 100%;
+  }
+}
 .learn .mediaCard__image {
   width: 100px;
   height: 100px;
