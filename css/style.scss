@@ -158,7 +158,7 @@ path {
             ul {
                 display: flex;
                 justify-content: space-between;
-                width: 40%;
+                width: 30%;
 
                 li {
                     list-style: none;
@@ -841,7 +841,7 @@ path {
         margin-bottom: 3.5rem;
     }
 
-    &__container {
+    &__container, &__worksWithTeams {
 
         @include media("screen", ">=tablet") {
             width: 100%;
@@ -851,6 +851,18 @@ path {
             justify-content: space-between;
            } 
     }
+
+    .breakText {
+        font-size: 24px;
+        font-weight: 300;
+        margin-top: 24px;
+    }
+    .shortNote {
+        margin: 12px 0 20px;
+    }
+
+    // &__worksWithTeams {
+    // }
 
     &__card {
         background-color: var(--main);
@@ -1046,6 +1058,42 @@ path {
         @include media("screen", ">=tablet") {
             font-size: 4.375rem; //70px
            } 
+    }
+
+    .mediaCard {
+        width: 30%;
+        border-radius: 24px;
+        padding: 24px;
+        background-color: rgba($color: #222, $alpha: 0.6);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 16px;
+        margin: 0 auto;
+        margin-top: 32px;
+        &__image {
+            width: 100px;
+            height: 100px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+        &__textContent {
+            text-align: left;
+            h3 {
+                font-weight: 400;
+            }
+            button {
+                margin-top: 10px;
+                padding: 8px 16px;
+                border-radius: 12px;
+                cursor: pointer;
+                background-color: #ffffff;
+                font-weight: 500;
+            }
+        }
     }
   }
 
