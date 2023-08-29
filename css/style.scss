@@ -13,12 +13,12 @@
     --white: #ffffff;
     --black: #000000;
 
-    --orange: #F9A31A;
-    --whatsapp: #00E676;
-    --behance: #0253F2;
-    --dribbble: #A91F55;
-    --twitter: #1C99E6;
-    --instagram: #F56040;
+    --orange: #f9a31a;
+    --whatsapp: #00e676;
+    --behance: #0253f2;
+    --dribbble: #a91f55;
+    --twitter: #1c99e6;
+    --instagram: #f56040;
 
     --cwhite: #ffffff;
     --gblack: #fff;
@@ -31,12 +31,12 @@
     --white: #000;
     --black: #fff;
 
-    --orange: #F9A31A;
-    --whatsapp: #00E676;
-    --behance: #0253F2;
-    --dribbble: #A91F55;
-    --twitter: #1C99E6;
-    --instagram: #F56040;
+    --orange: #f9a31a;
+    --whatsapp: #00e676;
+    --behance: #0253f2;
+    --dribbble: #a91f55;
+    --twitter: #1c99e6;
+    --instagram: #f56040;
 
     --cwhite: #ffffff;
     --gblack: #000000;
@@ -53,17 +53,15 @@ $margin-center: 0px auto;
 $border-center: 25rem; //400px
 $border: 1px solid var(--white);
 
-
-
-  //------------------ RESET------------------
+//------------------ RESET------------------
 
 .h3-text {
     font-size: 1.875rem; //30px
     font-weight: 300;
-    
+
     @include media("screen", ">=tablet") {
         font-size: 3.75rem; //60px
-       } 
+    }
 }
 
 a {
@@ -75,114 +73,111 @@ path {
     fill: var(--white);
 }
 
- body {
-     background-color: var(--main);
-     color: var(--white);
-     font-family: "poppins";
- }
+body {
+    background-color: var(--main);
+    color: var(--white);
+    font-family: "poppins";
+}
 
+// -----------------Scrollbar---------------
+html::-webkit-scrollbar {
+    width: 6px;
+    background-color: var(--secondary);
 
- // -----------------Scrollbar---------------
- html::-webkit-scrollbar {
-     width: 6px;
-     background-color: var(--secondary);
+    &:hover {
+        width: 20px;
+    }
 
-     &:hover {
-         width: 20px;
-     }
+    @include media("screen", ">=tablet") {
+        width: 10px;
+    }
+}
 
-     @include media("screen", ">=tablet") {
-         width: 10px;
-        } 
- }
+html::-webkit-scrollbar-thumb {
+    width: 6px;
+    background-color: var(--orange);
+    border-radius: 10px;
 
- html::-webkit-scrollbar-thumb {
-     width: 6px;
-     background-color: var(--orange);
-     border-radius: 10px;
+    &:hover {
+        background-color: var(--white);
+    }
+}
 
-     &:hover {
-         background-color: var(--white);
-     }
- }
+//-------------------THEME-------------------
 
- //-------------------THEME-------------------
+.theme {
+    margin-right: 5px;
+    cursor: pointer;
 
- .theme {
-     margin-right: 5px;
-     cursor: pointer;
-     
-     path {
+    path {
         fill: var(--white);
     }
 
+    @include media("screen", ">=tablet") {
+        margin-right: 0px;
+    }
+}
 
-     @include media("screen", ">=tablet") {
-         margin-right: 0px;
-     }
- }
+//------------------ NAVBAR------------------
 
-  //------------------ NAVBAR------------------
+.navbar {
+    height: 3.75rem; //60px
+    background: rgba(17, 17, 17, 0.1);
+    backdrop-filter: blur(60px);
+    position: absolute;
+    width: 100%;
+    padding: $padding-mobile;
+    position: fixed;
+    z-index: 1000;
 
- .navbar {
-     height: 3.75rem; //60px
-     background: rgba(17, 17, 17, 0.1);
-     backdrop-filter: blur(60px);
-     position: absolute;
-     width: 100%;
-     padding: $padding-mobile;
-     position: fixed;
-     z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
+    @include media("screen", ">=tablet") {
+        height: 6.75rem; //108px
+        padding: 1.875rem; //30px
+    }
 
-     @include media("screen", ">=tablet") {
-         height: 6.75rem; //108px
-         padding: 1.875rem; //30px
-        } 
-     
+    @include media("screen", ">=desktop") {
+        height: 5rem; //80px
+        padding: 1.875rem; //30px
+    }
+
+    &__links {
+        display: none;
+
         @include media("screen", ">=desktop") {
-         height: 5rem; //80px
-         padding: 1.875rem; //30px
-        } 
+            display: contents;
+        }
 
-        &__links {
-            display: none;
+        ul {
+            display: flex;
+            justify-content: space-between;
+            width: 30%;
 
-            @include media("screen", ">=desktop") {
-                display: contents;
-            } 
+            li {
+                list-style: none;
+                font-size: 0.8rem; //20px
+                font-weight: 300;
 
-            ul {
-                display: flex;
-                justify-content: space-between;
-                width: 30%;
+                a {
+                    &:hover {
+                        padding-bottom: 0.25rem; //4px
+                        border-bottom: 0.125rem solid var(--white); //2px
 
-                li {
-                    list-style: none;
-                    font-size: 0.8rem; //20px
-                    font-weight: 300;
-      
-                    a {
-                        &:hover {
+                        @include media("screen", ">=tablet") {
                             padding-bottom: 0.25rem; //4px
                             border-bottom: 0.125rem solid var(--white); //2px
-    
-                            @include media("screen", ">=tablet") {
-                                padding-bottom: 0.25rem; //4px
-                                border-bottom: 0.125rem solid var(--white); //2px
-                               }   
                         }
                     }
                 }
             }
+        }
 
+        .reach {
+            display: none;
 
-            .reach {
-                display: none;
-    
             @include media("screen", ">=desktop") {
                 display: flex;
                 border: $border;
@@ -191,81 +186,72 @@ path {
                 border-radius: 0.375rem; //6px
                 color: var(--orange);
 
-
-            &:hover {
-                background-color: var(--orange);
-                color: var(--white);
-                background: linear-gradient(90deg, #F9A31A 0%, #E48C00 102.75%);
-            }
-                } 
-            }
-        }
-
-
-        &__logo {
-                    
-            @include media("screen", ">=tablet") {
-                height: 2.0625rem; //33px
-                width: 100%;
-            } 
-        }
-
-        &__menu {
-
-            
-            &--opened , &--closed{
-                path {
-                    stroke: var(--white);
+                &:hover {
+                    background-color: var(--orange);
+                    color: var(--white);
+                    background: linear-gradient(90deg, #f9a31a 0%, #e48c00 102.75%);
                 }
             }
-            &--opened {
-                path {
-                    stroke: var(--white);
-                }
-    
-                @include media("screen", ">=desktop") {
-                    display: none;
-                } 
+        }
+    }
+
+    &__logo {
+        @include media("screen", ">=tablet") {
+            height: 2.0625rem; //33px
+            width: 100%;
+        }
+    }
+
+    &__menu {
+        &--opened,
+        &--closed {
+            path {
+                stroke: var(--white);
             }
-                    
-            @include media("screen", ">=tablet") {
-                height: 2rem; //32px
-                width: 2rem; //32px
-            } 
-            
+        }
+        &--opened {
+            path {
+                stroke: var(--white);
+            }
+
             @include media("screen", ">=desktop") {
                 display: none;
-            } 
+            }
         }
- }
-        
-        .closed {
+
+        @include media("screen", ">=tablet") {
+            height: 2rem; //32px
+            width: 2rem; //32px
+        }
+
+        @include media("screen", ">=desktop") {
             display: none;
-        } 
-        
-        .opened {
-            display: contents;
         }
+    }
+}
 
+.closed {
+    display: none;
+}
 
+.opened {
+    display: contents;
+}
 
-
- .navbar-overlay {
-
-
+.navbar-overlay {
     @include media("screen", ">=desktop") {
         display: none;
-    } 
+    }
 
-     .bg-overlay {
+    .bg-overlay {
         background: rgba(17, 17, 17, 0.9);
         width: 100%;
         height: 100vh;
         position: fixed;
         z-index: 999;
-     }
+    }
 
-     &__bg {
+    &__bg {
         background-color: var(--secondary);
         width: 80%;
         height: 100vh;
@@ -288,7 +274,7 @@ path {
 
             @include media("screen", ">=tablet") {
                 height: 20rem; //320px
-               } 
+            }
 
             li {
                 list-style: none;
@@ -297,7 +283,7 @@ path {
 
                 @include media("screen", ">=tablet") {
                     font-size: 1.75rem; //28px
-                   } 
+                }
 
                 a {
                     &:hover {
@@ -307,7 +293,7 @@ path {
                         @include media("screen", ">=tablet") {
                             padding-bottom: 0.25rem; //4px
                             border-bottom: 0.125rem solid var(--white); //2px
-                           }   
+                        }
                     }
                 }
             }
@@ -330,7 +316,7 @@ path {
 
             &:hover {
                 letter-spacing: 0.125rem; //2px
-                background: linear-gradient(90deg, #F9A31A 0%, #E48C00 102.75%);
+                background: linear-gradient(90deg, #f9a31a 0%, #e48c00 102.75%);
                 color: var(--white);
             }
         }
@@ -338,23 +324,20 @@ path {
         &--cta {
             display: inline-flexbox;
         }
-        
-     }
- }
+    }
+}
 
+.scroll-overlay {
+    border: 1.5px solid var(--orange);
+    width: 3.75rem; //60px
+    height: 3.75rem; //60px
+    z-index: 10;
+    border-radius: 6.25rem; //100px
+    background: rgba(249, 163, 26, 0.3);
 
-
- .scroll-overlay {
-     border: 1.5px solid var(--orange);
-     width: 3.75rem; //60px
-     height: 3.75rem; //60px
-     z-index: 10;
-     border-radius: 6.25rem; //100px
-     background: rgba(249, 163, 26, 0.3);
-
-     position: fixed;
-     top: 85vh;
-     right: 10%;
+    position: fixed;
+    top: 85vh;
+    right: 10%;
 
     display: flex;
     justify-content: center;
@@ -371,52 +354,51 @@ path {
             }
         }
     }
- }
+}
 
+section {
+    padding: $padding-mobile;
 
+    @include media("screen", ">=tablet") {
+        padding: $padding-tablet;
+    }
+}
 
- section {
-     padding: $padding-mobile;
-
-     @include media("screen", ">=tablet") {
-         padding: $padding-tablet;
-         } 
- }
-
-
-
- .header, .offer, .design, .code, .trading, .learn, .footer {
+.header,
+.offer,
+.design,
+.code,
+.trading,
+.learn,
+.footer {
     padding-top: 7.5rem; //120px
     padding-bottom: 7.5rem; //88px
- }
+}
 
+//------------------HEADER------------------
 
-
- //------------------HEADER------------------
-
- .header {
-     
-     @include media("screen", ">=tablet") {
+.header {
+    @include media("screen", ">=tablet") {
         padding-top: 12.5rem; //120px
-    } 
+    }
 
-     @include media("screen", ">=desktop") {
-         position: relative;
-         display: flex;
-         flex-direction: column;
-         justify-content: center;
-    } 
+    @include media("screen", ">=desktop") {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 
     &__main {
         margin-bottom: 2.8125rem; //45px
-            /* width:fit-content; */
+        /* width:fit-content; */
 
-            @include media("screen", ">=desktop") {
-                margin-bottom: 0rem; //45px
-                display: inline-flex;
-                flex-direction: column;
-           }
-            
+        @include media("screen", ">=desktop") {
+            margin-bottom: 0rem; //45px
+            display: inline-flex;
+            flex-direction: column;
+        }
+
         h2 {
             font-size: 3.25rem; //52px
             /* Typing effect start 
@@ -428,7 +410,7 @@ path {
                 blink-caret .75s step-end infinite; */
         }
 
-         /* Typing effect 
+        /* Typing effect 
         /* @keyframes typing {
             from {width: 0}
             to {width: 100%}
@@ -445,7 +427,7 @@ path {
 
             @include media("screen", ">=tablet") {
                 font-size: 1.375rem;
-                } 
+            }
         }
     }
 
@@ -454,22 +436,22 @@ path {
         height: 16rem; //256px
         margin: $margin-center;
         border-radius: $border-center;
-        background: linear-gradient(90deg, #F9A31A 0%, #E48C00 102.75%);
+        background: linear-gradient(90deg, #f9a31a 0%, #e48c00 102.75%);
 
         display: flex;
         justify-content: center;
         align-items: center;
 
         @include media("screen", ">=tablet") {
-                width: 20.1875rem;
-                height: 20.1875rem;
-           } 
+            width: 20.1875rem;
+            height: 20.1875rem;
+        }
 
-           @include media("screen", ">=desktop") {
-               position: absolute;
-               right: 0;
-               margin-right: 6.25rem;
-       }
+        @include media("screen", ">=desktop") {
+            position: absolute;
+            right: 0;
+            margin-right: 6.25rem;
+        }
 
         &--inner {
             width: 15.5rem; //190px
@@ -479,40 +461,35 @@ path {
             background-size: contain;
 
             @include media("screen", ">=tablet") {
-                    width: 19.5rem;
-                    height: 19.5rem;
-               } 
-        } 
-
+                width: 19.5rem;
+                height: 19.5rem;
+            }
+        }
     }
 
     &__sub {
-                
-     @include media("screen", ">=tablet") {
-         width: 25rem; //400px
-        } 
-
-        
+        @include media("screen", ">=tablet") {
+            width: 45%; //400px
+        }
 
         p {
             font-size: 1rem; //16px
-            font-weight: 300; 
+            font-weight: 300;
             padding: 2.8125rem 0 2.1875rem; //45px 0 35px
             line-height: 1.5625rem; //25px
 
             @include media("screen", ">=tablet") {
                 font-size: 1.125rem; //18px
                 line-height: 1.875rem; //30px
-               }
+            }
 
-               @include media("screen", ">=desktop") {
+            @include media("screen", ">=desktop") {
                 padding: 1.8125rem 0 2.1875rem; //45px 0 35px
-           }
+            }
         }
 
-
         &--explore {
-            background: linear-gradient(90deg, #F9A31A 0%, #E48C00 102.75%);
+            background: linear-gradient(90deg, #f9a31a 0%, #e48c00 102.75%);
             padding: 0.625rem 1.25rem; //10px 20px
             display: inline-flex;
             align-items: center;
@@ -526,19 +503,15 @@ path {
                 margin-left: 6px;
             }
         }
-
-
     }
- }
+}
 
+//------------------WHAT WE OFFER------------------
 
-
-  //------------------WHAT WE OFFER------------------
-
-  .offer {
-    background-color: var(--secondary);     
+.offer {
+    background-color: var(--secondary);
     text-align: center;
-    
+
     h3 {
         padding-bottom: 4.75rem; //76px
     }
@@ -546,16 +519,15 @@ path {
     &__items {
         width: 100%;
 
-        
         @include media("screen", ">=tablet") {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-           } 
+        }
 
-           @include media("screen", ">=desktop") {
+        @include media("screen", ">=desktop") {
             flex-wrap: nowrap;
-              } 
+        }
 
         &--item {
             border: $border;
@@ -579,13 +551,12 @@ path {
             @include media("screen", ">=tablet") {
                 width: 19.1875rem; //307px
                 margin-bottom: 1.25rem; //20px
-               } 
+            }
 
             @include media("screen", ">=desktop") {
                 width: 16rem; //307px
                 margin-bottom: 1.25rem; //20px
-               } 
-            
+            }
 
             .svg {
                 border: $border;
@@ -599,12 +570,10 @@ path {
             }
         }
     }
-  }
+}
 
-
-
-  //------------------ DESIGN ------------------
-  .design {    
+//------------------ DESIGN ------------------
+.design {
     text-align: center;
 
     h3 {
@@ -615,7 +584,8 @@ path {
         display: flex;
         align-items: center;
 
-        &--main , &--sub {
+        &--main,
+        &--sub {
             margin: 20px 0 20px;
         }
 
@@ -623,15 +593,14 @@ path {
             border: $border;
             width: 4.75rem; //76px
             padding: 8px; //8px
-            border-radius: 0.25rem; //4px 
+            border-radius: 0.25rem; //4px
             margin-right: 0.625rem; //10px
             cursor: pointer;
-    
+
             display: flex;
             justify-content: space-around;
             align-items: center;
 
-    
             span {
                 font-size: 0.875rem; //14px
                 font-weight: 300;
@@ -667,7 +636,6 @@ path {
                 }
             }
         }
-        
     }
 
     &__container {
@@ -686,12 +654,11 @@ path {
 
         @include media("screen", ">=phone") {
             width: 100%;
-        } 
-        
+        }
+
         @include media("screen", ">=tablet") {
             width: 19.3125rem; //309px
-           }
-
+        }
 
         &--carousel {
             height: 16.25rem; //260px
@@ -729,7 +696,7 @@ path {
                 }
             }
             .view {
-                background: linear-gradient(90deg, #F9A31A 0%, #E48C00 102.75%);
+                background: linear-gradient(90deg, #f9a31a 0%, #e48c00 102.75%);
                 width: 1.9375rem; //34px
                 height: 1.9375rem; //34px
                 display: flex;
@@ -747,109 +714,102 @@ path {
     }
 
     &__profile {
-
         @include media("screen", ">=desktop") {
             margin-top: 1.25rem; //20px
 
             display: flex;
             align-items: center;
             justify-content: space-between;
-           } 
-
-        .behance, .dribbble {
-        display: flex;
-        justify-content: center;
-        border-radius: 0.5rem; //8px
-        padding: 0.8125rem 2.25rem; //13px 36px
-        background-color: var(--behance);
-        color: var(--cwhite);
-        cursor: pointer;
-        position: relative;
-
-        path {
-            fill: var(--cwhite);
         }
 
-        /* @include media("screen", ">=tablet") {
+        .behance,
+        .dribbble {
+            display: flex;
+            justify-content: center;
+            border-radius: 0.5rem; //8px
+            padding: 0.8125rem 2.25rem; //13px 36px
+            background-color: var(--behance);
+            color: var(--cwhite);
+            cursor: pointer;
+            position: relative;
+
+            path {
+                fill: var(--cwhite);
+            }
+
+            /* @include media("screen", ">=tablet") {
            }  */
 
-        &::after {
-            content: " ";
-            background: var(--behance);
-            filter: blur(0.625rem); //10px
-            position: absolute;
-            z-index: -1;
-            width: 90%;
-            height: 50%;
-            top: 25px;
-            opacity: 0%;
-            transition: all 300ms;
+            &::after {
+                content: " ";
+                background: var(--behance);
+                filter: blur(0.625rem); //10px
+                position: absolute;
+                z-index: -1;
+                width: 90%;
+                height: 50%;
+                top: 25px;
+                opacity: 0%;
+                transition: all 300ms;
+            }
+            &:hover::after {
+                opacity: 100%;
+            }
+
+            svg {
+                margin-right: 1.25rem; //20px
+            }
         }
-        &:hover::after {
-            opacity: 100%;
+
+        .dribbble {
+            margin-top: 1.25rem;
+            background-color: var(--dribbble);
+
+            @include media("screen", ">=desktop") {
+                margin-top: 0rem;
+            }
+
+            &::after {
+                background: var(--dribbble);
+            }
+            &:hover::after {
+                opacity: 100%;
+            }
         }
-        
-        svg {
-            margin-right: 1.25rem; //20px
+
+        &--view {
+            display: none;
+
+            @include media("screen", ">=desktop") {
+                font-weight: lighter;
+                width: 12.5rem; //200px
+
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+            }
         }
     }
+}
 
-    .dribbble {
-        margin-top: 1.25rem;
-        background-color: var(--dribbble);
-
-        @include media("screen", ">=desktop") {
-            margin-top: 0rem;
-           } 
-
-        &::after {
-            background: var(--dribbble);
-        }
-        &:hover::after {
-            opacity: 100%;
-        }
-    }
-
-    &--view {
-        display: none;
-
-        
-
-        @include media("screen", ">=desktop") {
-            font-weight: lighter;
-            width: 12.5rem; //200px
-
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-           } 
-    }
-    }
-
-
-  }
-
-
-
-  //------------------ CODE ------------------
-  .code {
-    background-color: var(--secondary);     
+//------------------ CODE ------------------
+.code {
+    background-color: var(--secondary);
     text-align: center;
-
 
     h3 {
         margin-bottom: 3.5rem;
     }
 
-    &__container, &__worksWithTeams {
-
+    &__container,
+    &__worksWithTeams {
         @include media("screen", ">=tablet") {
             width: 100%;
 
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-           } 
+        }
     }
 
     .breakText {
@@ -875,10 +835,9 @@ path {
             box-shadow: 0px 10px 25px -15px rgba(0, 0, 0, 0.15);
         }
 
-        
         @include media("screen", ">=tablet") {
             width: 19.3125rem; //309px
-           } 
+        }
 
         &--cover {
             border-radius: 0.375rem; //6px
@@ -903,7 +862,7 @@ path {
                 opacity: 0;
                 transition: all 400ms;
             }
-            
+
             &:hover::after {
                 opacity: 100%;
             }
@@ -924,19 +883,19 @@ path {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                
+
                 &:hover {
                     opacity: 1;
                 }
             }
         }
 
-        &--details {  
+        &--details {
             padding-top: 0.5rem; //8px
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0.625rem; //10px 
+            padding: 0.625rem; //10px
 
             .info {
                 text-align: left;
@@ -952,7 +911,7 @@ path {
                 }
             }
             .visit {
-                background: linear-gradient(90deg, #F9A31A 0%, #E48C00 102.75%);
+                background: linear-gradient(90deg, #f9a31a 0%, #e48c00 102.75%);
                 width: 2.125rem; //34px
                 height: 2.125rem;
                 display: flex;
@@ -973,31 +932,25 @@ path {
         cursor: pointer;
         position: relative;
 
-        
         svg {
             margin-right: 20px;
         }
     }
-  }
+}
 
-
-
-  //------------------ CODE ------------------
-  .trading {    
-
+//------------------ CODE ------------------
+.trading {
     text-align: center;
 
     &__info {
         padding-top: 1.875rem; //30px
-            font-weight: 300;
+        font-weight: 300;
 
-        
         @include media("screen", ">=tablet") {
             width: 28.125rem; //450px
             margin: $margin-center;
             font-size: 1.25rem; //20px
-           } 
-
+        }
     }
 
     &__join {
@@ -1017,7 +970,7 @@ path {
             width: 500px;
             margin: $margin-center;
             margin-top: 2.625rem; //42px
-        } 
+        }
 
         &::after {
             content: " ";
@@ -1039,13 +992,11 @@ path {
             margin-right: 1.25rem; //20px
         }
     }
-  }
+}
 
-
-
-  //------------------ LEARN ------------------
-  .learn {
-    background-color: var(--secondary);    
+//------------------ LEARN ------------------
+.learn {
+    background-color: var(--secondary);
 
     text-align: center;
 
@@ -1054,10 +1005,9 @@ path {
         font-size: 2.5rem; //40px
         font-weight: 700;
 
-        
         @include media("screen", ">=tablet") {
             font-size: 4.375rem; //70px
-           } 
+        }
     }
 
     .mediaCard {
@@ -1073,7 +1023,7 @@ path {
         margin-top: 32px;
         @include media("screen", "<=tablet") {
             width: 100%;
-            } 
+        }
         &__image {
             width: 100px;
             height: 100px;
@@ -1098,12 +1048,10 @@ path {
             }
         }
     }
-  }
+}
 
-
-
-  //------------------ FOOTER ------------------
-  .footer {
+//------------------ FOOTER ------------------
+.footer {
     padding-bottom: 1.5rem; //88px
 
     font-weight: 300;
@@ -1115,20 +1063,20 @@ path {
 
         margin-bottom: 3.125rem; //50px
 
-        &--left , &--right {
+        &--left,
+        &--right {
             p {
                 margin-bottom: 1.875rem; //30px
             }
         }
 
         &--left {
-
             ul {
                 height: 5rem; //80px
 
                 @include media("screen", ">=tablet") {
                     height: 7.5rem; //120px
-                } 
+                }
 
                 display: flex;
                 flex-direction: column;
@@ -1140,7 +1088,7 @@ path {
 
                     @include media("screen", ">=tablet") {
                         font-size: 1rem; //16px
-                    } 
+                    }
 
                     a {
                         text-decoration: none;
@@ -1152,7 +1100,6 @@ path {
         }
 
         &--right {
-
             .links {
                 width: 11.875rem; //190px
                 height: 6.875rem; //110px
@@ -1164,7 +1111,6 @@ path {
                     fill: var(--cwhite);
                 }
 
-
                 a {
                     border-radius: 0.25rem; //4px
                     margin-right: 1.25rem; //20px
@@ -1174,33 +1120,32 @@ path {
                     align-items: center;
                     justify-content: center;
 
-                &:nth-child(1) {
+                    &:nth-child(1) {
                         background-color: var(--whatsapp);
-                }
-                &:nth-child(2) {
+                    }
+                    &:nth-child(2) {
                         background-color: var(--twitter);
-                }
-                &:nth-child(3) {
+                    }
+                    &:nth-child(3) {
                         background-color: var(--instagram);
-                }
-                &:nth-child(4) {
+                    }
+                    &:nth-child(4) {
                         background-color: var(--dribbble);
-                }
-                &:nth-child(5) {
+                    }
+                    &:nth-child(5) {
                         background-color: var(--behance);
-                }
-                &:nth-child(6) {
+                    }
+                    &:nth-child(6) {
                         background-color: var(--black);
 
                         &:nth-child(6) {
-                    
                             svg {
                                 path {
                                     fill: var(--gblack);
                                 }
                             }
                         }
-                }
+                    }
                 }
             }
         }
@@ -1210,5 +1155,4 @@ path {
         font-size: 0.625rem; //10px
         text-align: center;
     }
-
-  } 
+}

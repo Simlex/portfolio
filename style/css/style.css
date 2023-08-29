@@ -14,12 +14,12 @@
   --lighter-grey: #888888;
   --white: #ffffff;
   --black: #000000;
-  --orange: #F9A31A;
-  --whatsapp: #00E676;
-  --behance: #0253F2;
-  --dribbble: #A91F55;
-  --twitter: #1C99E6;
-  --instagram: #F56040;
+  --orange: #f9a31a;
+  --whatsapp: #00e676;
+  --behance: #0253f2;
+  --dribbble: #a91f55;
+  --twitter: #1c99e6;
+  --instagram: #f56040;
   --cwhite: #ffffff;
   --gblack: #fff;
 }
@@ -30,12 +30,12 @@
   --lighter-grey: #111111;
   --white: #000;
   --black: #fff;
-  --orange: #F9A31A;
-  --whatsapp: #00E676;
-  --behance: #0253F2;
-  --dribbble: #A91F55;
-  --twitter: #1C99E6;
-  --instagram: #F56040;
+  --orange: #f9a31a;
+  --whatsapp: #00e676;
+  --behance: #0253f2;
+  --dribbble: #a91f55;
+  --twitter: #1c99e6;
+  --instagram: #f56040;
   --cwhite: #ffffff;
   --gblack: #000000;
 }
@@ -181,8 +181,8 @@ html::-webkit-scrollbar-thumb:hover {
   .navbar__links .reach:hover {
     background-color: var(--orange);
     color: var(--white);
-    background: -webkit-gradient(linear, left top, right top, from(#F9A31A), color-stop(102.75%, #E48C00));
-    background: linear-gradient(90deg, #F9A31A 0%, #E48C00 102.75%);
+    background: -webkit-gradient(linear, left top, right top, from(#f9a31a), color-stop(102.75%, #e48c00));
+    background: linear-gradient(90deg, #f9a31a 0%, #e48c00 102.75%);
   }
 }
 @media screen and (min-width: 768px) {
@@ -306,8 +306,8 @@ html::-webkit-scrollbar-thumb:hover {
 }
 .navbar-overlay__bg .reach:hover {
   letter-spacing: 0.125rem;
-  background: -webkit-gradient(linear, left top, right top, from(#F9A31A), color-stop(102.75%, #E48C00));
-  background: linear-gradient(90deg, #F9A31A 0%, #E48C00 102.75%);
+  background: -webkit-gradient(linear, left top, right top, from(#f9a31a), color-stop(102.75%, #e48c00));
+  background: linear-gradient(90deg, #f9a31a 0%, #e48c00 102.75%);
   color: var(--white);
 }
 .navbar-overlay__bg--cta {
@@ -353,7 +353,13 @@ section {
   }
 }
 
-.header, .offer, .design, .code, .trading, .learn, .footer {
+.header,
+.offer,
+.design,
+.code,
+.trading,
+.learn,
+.footer {
   padding-top: 7.5rem;
   padding-bottom: 7.5rem;
 }
@@ -428,8 +434,8 @@ section {
   height: 16rem;
   margin: 0px auto;
   border-radius: 25rem;
-  background: -webkit-gradient(linear, left top, right top, from(#F9A31A), color-stop(102.75%, #E48C00));
-  background: linear-gradient(90deg, #F9A31A 0%, #E48C00 102.75%);
+  background: -webkit-gradient(linear, left top, right top, from(#f9a31a), color-stop(102.75%, #e48c00));
+  background: linear-gradient(90deg, #f9a31a 0%, #e48c00 102.75%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -468,7 +474,7 @@ section {
 }
 @media screen and (min-width: 768px) {
   .header__sub {
-    width: 25rem;
+    width: 45%;
   }
 }
 .header__sub p {
@@ -489,8 +495,8 @@ section {
   }
 }
 .header__sub--explore {
-  background: -webkit-gradient(linear, left top, right top, from(#F9A31A), color-stop(102.75%, #E48C00));
-  background: linear-gradient(90deg, #F9A31A 0%, #E48C00 102.75%);
+  background: -webkit-gradient(linear, left top, right top, from(#f9a31a), color-stop(102.75%, #e48c00));
+  background: linear-gradient(90deg, #f9a31a 0%, #e48c00 102.75%);
   padding: 0.625rem 1.25rem;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -730,8 +736,8 @@ section {
   font-style: italic;
 }
 .design__card--details .view {
-  background: -webkit-gradient(linear, left top, right top, from(#F9A31A), color-stop(102.75%, #E48C00));
-  background: linear-gradient(90deg, #F9A31A 0%, #E48C00 102.75%);
+  background: -webkit-gradient(linear, left top, right top, from(#f9a31a), color-stop(102.75%, #e48c00));
+  background: linear-gradient(90deg, #f9a31a 0%, #e48c00 102.75%);
   width: 1.9375rem;
   height: 1.9375rem;
   display: -webkit-box;
@@ -764,7 +770,8 @@ section {
             justify-content: space-between;
   }
 }
-.design__profile .behance, .design__profile .dribbble {
+.design__profile .behance,
+.design__profile .dribbble {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -778,12 +785,14 @@ section {
   cursor: pointer;
   position: relative;
   /* @include media("screen", ">=tablet") {
-     }  */
+  }  */
 }
-.design__profile .behance path, .design__profile .dribbble path {
+.design__profile .behance path,
+.design__profile .dribbble path {
   fill: var(--cwhite);
 }
-.design__profile .behance::after, .design__profile .dribbble::after {
+.design__profile .behance::after,
+.design__profile .dribbble::after {
   content: " ";
   background: var(--behance);
   -webkit-filter: blur(0.625rem);
@@ -797,10 +806,12 @@ section {
   -webkit-transition: all 300ms;
   transition: all 300ms;
 }
-.design__profile .behance:hover::after, .design__profile .dribbble:hover::after {
+.design__profile .behance:hover::after,
+.design__profile .dribbble:hover::after {
   opacity: 100%;
 }
-.design__profile .behance svg, .design__profile .dribbble svg {
+.design__profile .behance svg,
+.design__profile .dribbble svg {
   margin-right: 1.25rem;
 }
 .design__profile .dribbble {
@@ -965,8 +976,8 @@ section {
   font-style: italic;
 }
 .code__card--details .visit {
-  background: -webkit-gradient(linear, left top, right top, from(#F9A31A), color-stop(102.75%, #E48C00));
-  background: linear-gradient(90deg, #F9A31A 0%, #E48C00 102.75%);
+  background: -webkit-gradient(linear, left top, right top, from(#f9a31a), color-stop(102.75%, #e48c00));
+  background: linear-gradient(90deg, #f9a31a 0%, #e48c00 102.75%);
   width: 2.125rem;
   height: 2.125rem;
   display: -webkit-box;
