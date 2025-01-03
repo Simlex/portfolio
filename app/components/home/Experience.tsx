@@ -3,9 +3,7 @@ import React from 'react'
 import { Icons } from '../ui/icons'
 import { motion } from 'framer-motion'
 
-type Props = {}
-
-export default function Experience({ }: Props) {
+export default function Experience() {
 
 
     const experiences = [
@@ -61,7 +59,7 @@ export default function Experience({ }: Props) {
                                         experience.roles.map((role, index) => {
                                             if (index === 0) {
                                                 return (
-                                                    <Link href={experience.link} className='flex flex-row group'>
+                                                    <Link key={index} href={experience.link} className='flex flex-row group'>
                                                         <h3 key={index} className='text-foreground text-semibold'>
                                                             {role}
                                                         </h3>
