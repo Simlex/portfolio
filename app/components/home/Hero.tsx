@@ -54,7 +54,7 @@ export default function Hero() {
                 <motion.span
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
-                    className='text-secondary mb-4 md:w-[50%] md:mb-16'>
+                    className='text-secondary mb-4 w-[90%] md:w-[50%] md:mb-16'>
                     I find fulfilment in creating solutions to problems using technology.
                 </motion.span>
 
