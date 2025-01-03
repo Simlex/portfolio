@@ -3,6 +3,7 @@ import { useTheme } from 'next-themes'
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
+import { Icons } from './ui/icons';
 
 type Props = {}
 
@@ -36,7 +37,7 @@ export default function Homepage({ }: Props) {
             link: 'https://event.sticketsdeck.com'
         },
         {
-            date: '2022 - Present',
+            date: 'May 2022 - Present',
             roles: [
                 'Engineering Team Lead ~ Xown Solutions',
                 'Senior Engineer',
@@ -73,13 +74,19 @@ export default function Homepage({ }: Props) {
 
                     <div className='flex flex-row items-center gap-3'>
                         <Link href={"/"}>
-                            G
+                            <Icons.Github />
                         </Link>
                         <Link href={"/"}>
-                            In
+                            <Icons.LinkedIn />
                         </Link>
                         <Link href={"/"}>
-                            E
+                            <Icons.X />
+                        </Link>
+                        <Link href={"/"}>
+                            <Icons.Behance />
+                        </Link>
+                        <Link href={"/"}>
+                            <Icons.Dribble />
                         </Link>
                     </div>
                 </div>
@@ -123,9 +130,14 @@ export default function Homepage({ }: Props) {
                                             experience.roles.map((role, index) => {
                                                 if (index === 0) {
                                                     return (
-                                                        <h3 key={index} className='text-foreground text-semibold'>
-                                                            {role}
-                                                        </h3>
+                                                        <Link href={experience.link} className='flex flex-row group'>
+                                                            <h3 key={index} className='text-foreground text-semibold'>
+                                                                {role}
+                                                            </h3>
+                                                            <span className='rotate-45 scale-90 opacity-70 transition group-hover:opacity-100 group-hover:scale-100'>
+                                                                <Icons.ArrowUp />
+                                                            </span>
+                                                        </Link>
                                                     )
                                                 }
                                                 return (
@@ -197,7 +209,7 @@ export default function Homepage({ }: Props) {
             <section>
                 <p className='text-secondary text-sm pb-16'>
                     Inspiration gotten from <Link href={"/"} className="text-foreground">Brittany Chang</Link>.
-                    Built with NextJS, TailwindCSS, and Typescript. Hosted on Vercel.
+                    Built with <Link href={"/"} className="text-foreground">NextJS</Link>, <Link href={"/"} className="text-foreground">TailwindCSS</Link>, and <Link href={"/"} className="text-foreground">Typescript</Link>. Hosted on <Link href={"/"} className="text-foreground">Vercel</Link>.
                     Written by Similoluwa Afolabi.
                 </p>
             </section>
