@@ -1,9 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 
-type Props = {}
-
-export default function Footer({ }: Props) {
+export default function Footer() {
     return (
         <section>
             <p className='text-secondary text-sm pb-16'>
