@@ -6,9 +6,7 @@ import Projects from './home/Projects';
 import Hero from './home/Hero';
 import Footer from './home/Footer';
 
-type Props = {}
-
-export default function Homepage({ }: Props) {
+export default function Homepage() {
 
     useEffect(() => {
         const html = document.documentElement; // Select the <html> element

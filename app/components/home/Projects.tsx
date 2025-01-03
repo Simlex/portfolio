@@ -3,9 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 import { Icons } from '../ui/icons'
 
-type Props = {}
-
-export default function Projects({ }: Props) {
+export default function Projects() {
     return (
         <section className='flex flex-col pb-20'>
             <div>

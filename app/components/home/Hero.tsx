@@ -2,7 +2,6 @@ import React from 'react'
 import { Icons } from '../ui/icons'
 import Link from 'next/link'
 import { motion } from "framer-motion"
-import { span } from 'framer-motion/client'
 
 export default function Hero() {
 
