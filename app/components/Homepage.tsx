@@ -15,8 +15,8 @@ export default function Homepage() {
 
     return (
         <main
-            style={{ background: 'radial-gradient(circle, #0A192F 0%, #020C1B 100%)' }}
-            className="text-foreground px-5 md:px-28 md:flex md:flex-row dark:text-foreground">
+            // style={{ background: 'radial-gradient(circle, #0A192F 0%, #020C1B 100%)' }}
+            className="bg-background text-foreground px-5 md:px-20 md:flex md:flex-row dark:bg-background dark:text-foreground">
             <Hero />
             <div className='md:basis-[55%]'>
                 <About />
