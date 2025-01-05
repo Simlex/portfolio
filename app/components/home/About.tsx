@@ -19,7 +19,7 @@ export default function About() {
                     <motion.p
                         initial={{ y: 20, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}>
-                        Currently, I am a software engineer at <a href="https://www.xownsolutions.com/">Xown Solutions</a>, where I work on building
+                        Currently, I am a software engineer at <a className='text-white hover:underline' href="https://www.xownsolutions.com/">Xown Solutions</a>, where I work on building
                         software solutions that solve problems in the African tech ecosystem.
                     </motion.p>
                     <motion.p
