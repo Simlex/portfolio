@@ -1,6 +1,7 @@
 "use client"
 import { ThemeProvider } from 'next-themes'
 import React from 'react'
+import InteractiveBackground from './InteractiveBgCopy'
 
 type Props = {
     children: React.ReactNode
@@ -8,8 +9,9 @@ type Props = {
 
 export default function Layout({ children }: Props) {
     return (
-        <ThemeProvider attribute="class">
+        <>
+            <InteractiveBackground />
             {children}
-        </ThemeProvider>
+        </>
     )
 }
