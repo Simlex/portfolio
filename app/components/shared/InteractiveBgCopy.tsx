@@ -72,61 +72,61 @@ function AnimatedGeometry() {
     )
 }
 
-function GlowingDiamond() {
-    const diamondRef = useRef<Mesh>(null)
-    const glowRef = useRef<Mesh>(null)
+// function GlowingDiamond() {
+//     const diamondRef = useRef<Mesh>(null)
+//     const glowRef = useRef<Mesh>(null)
 
-    useFrame((state) => {
-        if (diamondRef.current && glowRef.current) {
-            // Rotate the diamond
-            diamondRef.current.rotation.y += 0.005
-            diamondRef.current.rotation.x += 0.0025
+//     useFrame((state) => {
+//         if (diamondRef.current && glowRef.current) {
+//             // Rotate the diamond
+//             diamondRef.current.rotation.y += 0.005
+//             diamondRef.current.rotation.x += 0.0025
 
-            // Pulsating effect
-            const scale = 4 + Math.sin(state.clock.elapsedTime * 2) * 0.1
-            diamondRef.current.scale.set(scale, scale, scale)
+//             // Pulsating effect
+//             const scale = 4 + Math.sin(state.clock.elapsedTime * 2) * 0.1
+//             diamondRef.current.scale.set(scale, scale, scale)
 
-            // Glow effect
-            const glowScale = 2.1 + Math.sin(state.clock.elapsedTime * 3) * 0.1
-            glowRef.current.scale.set(glowScale, glowScale, glowScale)
-        }
-    })
+//             // Glow effect
+//             const glowScale = 2.1 + Math.sin(state.clock.elapsedTime * 3) * 0.1
+//             glowRef.current.scale.set(glowScale, glowScale, glowScale)
+//         }
+//     })
 
-    return (
-        <group position={[0, -0, -2]}>
-            <mesh ref={diamondRef}>
-                <icosahedronGeometry args={[1, 0]} />
-                <MeshWobbleMaterial
-                    color="#00FFFF"
-                    factor={0.1}
-                    speed={1}
-                    metalness={0.8}
-                    roughness={0.2}
-                    opacity={0.3}
-                />
-            </mesh>
-            <mesh ref={glowRef}>
-                <icosahedronGeometry args={[1.1, 0]} />
-                <meshBasicMaterial color="#00FFFF" transparent opacity={0.3} />
-            </mesh>
-        </group>
-    )
-}
+//     return (
+//         <group position={[0, -0, -2]}>
+//             <mesh ref={diamondRef}>
+//                 <icosahedronGeometry args={[1, 0]} />
+//                 <MeshWobbleMaterial
+//                     color="#00FFFF"
+//                     factor={0.1}
+//                     speed={1}
+//                     metalness={0.8}
+//                     roughness={0.2}
+//                     opacity={0.3}
+//                 />
+//             </mesh>
+//             <mesh ref={glowRef}>
+//                 <icosahedronGeometry args={[1.1, 0]} />
+//                 <meshBasicMaterial color="#00FFFF" transparent opacity={0.3} />
+//             </mesh>
+//         </group>
+//     )
+// }
 
 
-function FloatingText() {
-    return (
-        <Text
-            position={[0, 0, -2]}
-            fontSize={0.5}
-            color="#ffffff"
-            anchorX="center"
-            anchorY="middle"
-        >
-            Similoluwa Afolabi
-        </Text>
-    )
-}
+// function FloatingText() {
+//     return (
+//         <Text
+//             position={[0, 0, -2]}
+//             fontSize={0.5}
+//             color="#ffffff"
+//             anchorX="center"
+//             anchorY="middle"
+//         >
+//             Similoluwa Afolabi
+//         </Text>
+//     )
+// }
 
 export default function InteractiveBackground() {
     const [mounted, setMounted] = useState(false)

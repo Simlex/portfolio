@@ -20,8 +20,9 @@ export default function RootLayout({
             <body
                 className={`${leagueSpartan.className} antialiased`}
             >
-                <Layout children={children} />
-                {/* {children} */}
+                <Layout>
+                    {children}
+                </Layout>
             </body>
         </html>
     );
