@@ -147,6 +147,8 @@ export default function InteractiveBackground() {
                 // style={{ background: 'radial-gradient(circle, #0A192F 0%, #020C1B 100%)' }}
             >
                 <AnimatedGeometry />
+                <AnimatedGeometry />
+                {/* <AnimatedGeometry /> */}
                 {/* <FloatingText /> */}
                 <Environment preset="night" />
                 {/* <GlowingDiamond /> */}
