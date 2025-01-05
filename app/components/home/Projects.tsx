@@ -2,8 +2,29 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { Icons } from '../ui/icons'
+import images from '@/public/images'
 
 export default function Projects() {
+
+    const projects = [
+        {
+            name: 'Ticketsdeck Event Web Application',
+            description: `A web application that connects event organizers with event attendees. 
+            The platform allows event organizers to create events, sell tickets, and manage attendees.`,
+            technologies: ['Typescript', 'ReactJS', 'NextJS', 'Prisma', 'NestJS', 'AWS'],
+            image: images.e_ticketsdeck,
+            link: 'https://events.ticketsdeck.com'
+        },
+        {
+            name: 'Stylist Piazza Mobile Application',
+            description: `A mobile application that connects hair stylists with customers. 
+            I was responsible for building the mobile application, and API.`,
+            technologies: ['Typescript', 'React Native', 'NodeJS', 'AWS'],
+            image: images.e_ticketsdeck,
+            link: 'https://apps.apple.com/ng/app/stylist-piazza/id6737825619'
+        }
+    ]
+
     return (
         <section className='flex flex-col pb-20'>
             <div>
@@ -24,8 +45,8 @@ export default function Projects() {
                         <span className='p-2 px-4 rounded-full bg-primary-light text-primary'>NextJS</span>
                         <span className='p-2 px-4 rounded-full bg-primary-light text-primary'>Typescript</span>
                     </div>
-                    <div className='w-48 h-24 rounded-xl relative border-white/20 border-[1px]'>
-                        <Image src="/images/ticketsdeck.png" alt="Ticketsdeck Event Web Application" className='text-xs' fill />
+                    <div className='w-48 h-24 rounded-xl relative overflow-hidden border-white/20 border-[1px]'>
+                        <Image src={images.e_ticketsdeck} alt="Ticketsdeck Event Web Application" className='text-xs' fill />
                     </div>
                 </div>
             </div>
