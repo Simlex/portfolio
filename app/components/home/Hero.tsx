@@ -22,6 +22,16 @@ export default function Hero() {
             icons: <Icons.X />
         },
         {
+            name: 'Mail',
+            url: 'mailto:similoluwaafolabi@gmail.com',
+            icons: <Icons.Mail />
+        },
+        {
+            name: 'Call',
+            url: 'tel:+2348065926316',
+            icons: <Icons.Call />
+        },
+        {
             name: 'Behance',
             url: 'https://www.behance.net/simlexdesigns',
             icons: <Icons.Behance />
@@ -34,20 +44,20 @@ export default function Hero() {
     ]
 
     return (
-        <section className='flex flex-col py-20 pb-14 md:basis-1/2 md:h-screen md:sticky md:top-0'>
+        <section className='flex flex-col py-20 md:py-28 pb-14 md:basis-1/2 md:h-screen md:sticky md:top-0'>
             <div className='flex flex-col items-start'>
                 {/* <p>Hello, there. I am</p> */}
                 <motion.h1
                     whileInView={{ scale: 1, opacity: 1 }}
                     initial={{ scale: 0.8, opacity: 0 }}
                     viewport={{ once: true }}
-                    className='text-4xl font-bold'>
+                    className='text-4xl font-bold md:text-5xl'>
                     Similoluwa Afolabi
                 </motion.h1>
                 <motion.p
                     initial={{ y: 20, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
-                    className='my-2'>
+                    className='my-2 text-base font-semibold'>
                     Senior Software Engineer
                 </motion.p>
                 <motion.span
@@ -75,7 +85,7 @@ export default function Hero() {
 
             <div className='mt-auto hidden md:block'>
                 <p className='text-secondary text-xs mt-10'>
-                    © {new Date().getFullYear()} Similoluwa Afolabi. All rights reserved.
+                    © {new Date().getFullYear()} Portfolio website. All rights reserved.
                 </p>
             </div>
         </section>
