@@ -3,10 +3,10 @@ import { motion } from 'framer-motion'
 
 export default function About() {
     return (
-        <section className='flex flex-col pb-20 md:pt-20'>
+        <section className='flex flex-col pb-20 md:pt-28'>
             <div>
-                <span className='py-3 mb-2 block text-sm font-semibold bg-background sticky top-0 z-20 md:hidden'>ABOUT</span>
-                <div className='flex flex-col gap-2 text-sm text-secondary leading-6'>
+                <span className='py-3 mb-2 block text-sm md:text-base font-semibold bg-background sticky top-0 z-20 md:hidden'>ABOUT</span>
+                <div className='flex flex-col gap-2 text-sm md:text-base text-secondary leading-6'>
                     <motion.p
                         initial={{ y: 20, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
@@ -19,7 +19,7 @@ export default function About() {
                     <motion.p
                         initial={{ y: 20, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}>
-                        Currently, I am a software engineer at <a href="https://www.xownsolutions.com/">Xown Solutions</a>, where I work on building
+                        Currently, I am a software engineer at <a className='text-white hover:underline' href="https://www.xownsolutions.com/">Xown Solutions</a>, where I work on building
                         software solutions that solve problems in the African tech ecosystem.
                     </motion.p>
                     <motion.p

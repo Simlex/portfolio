@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Raleway } from "next/font/google";
 import "./globals.css";
+import Layout from "./components/shared/Layout";
 
-const leagueSpartan = Inter({ display: "swap", subsets: ["latin"] });
+const leagueSpartan = Raleway({ display: "swap", subsets: ["latin"] });
 
 export const metadata: Metadata = {
     title: "Simlex Portfolio Website",
@@ -19,8 +20,8 @@ export default function RootLayout({
             <body
                 className={`${leagueSpartan.className} antialiased`}
             >
-                {/* <Layout children={children} /> */}
-                {children}
+                <Layout children={children} />
+                {/* {children} */}
             </body>
         </html>
     );
