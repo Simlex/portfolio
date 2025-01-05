@@ -14,7 +14,7 @@ export default function Experience() {
             ],
             description: `I co-founded Ticketsdeck Events, a platform that connects event organizers with event attendees. 
             I am responsible for the technical direction of the company, ensuring that we are building scalable and reliable software solutions.`,
-            skills: ['Typescript', 'ReactJS', 'NextJS', 'Prisma', 'NestJS', 'AWS'],
+            skills: ['Typescript', 'ReactJS', 'NextJS', 'Prisma', 'NestJS', 'TailwindCSS', 'AWS'],
             link: 'https://events.ticketsdeck.com'
         },
         {
@@ -26,7 +26,7 @@ export default function Experience() {
             ],
             description: `I lead a team of 5 software engineers in building software solutions that solve problems in the Global tech ecosystem. 
             I am responsible for the technical direction of the team, ensuring that we are building scalable and reliable software solutions.`,
-            skills: ['Javascript', 'Typescript', 'NextJS', 'Prisma', 'ASP.NET Core'],
+            skills: ['Javascript', 'Typescript', 'NextJS', 'Prisma', 'TailwindCSS', 'ASP.NET Core'],
             link: 'https://www.xownsolutions.com'
         },
         {
@@ -45,14 +45,14 @@ export default function Experience() {
     return (
         <section className='flex flex-col pb-20'>
             <div>
-                <span className='py-3 mb-2 block text-sm font-semibold bg-background sticky top-0 z-20'>EXPERIENCE</span>
+                <span className='py-3 mb-2 block text-sm md:text-base font-semibold bg-background sticky top-0 z-20'>EXPERIENCE</span>
                 <div className='flex flex-col gap-5'>
                     {
                         experiences.map((experience, index) => (
                             <motion.div key={index}
                                 initial={{ y: 25, opacity: 0 }}
                                 whileInView={{ y: 0, opacity: 1 }}
-                                className='text-sm text-secondary leading-6 mb-3'>
+                                className='text-sm md:text-base text-secondary leading-6 mb-3'>
                                 <span className='text-sm mb-2 block'>{experience.date}</span>
                                 <div className='flex flex-col gap-1'>
                                     {
