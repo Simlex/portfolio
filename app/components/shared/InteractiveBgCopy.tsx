@@ -3,7 +3,7 @@
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { useRef, useState, useEffect } from 'react'
 import { Vector3, Mesh, Color, MeshStandardMaterial } from 'three'
-import { Environment, Float, MeshWobbleMaterial, Text } from '@react-three/drei'
+import { Environment, Float } from '@react-three/drei'
 
 function AnimatedGeometry() {
     const meshRef = useRef<Mesh>(null)
