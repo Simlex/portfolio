@@ -7,6 +7,8 @@
     --foreground: #dde5ff;
     --primary: #FF4C29;
     --primary-light: #ff4d291a;
+    /* --primary: #B7FF64;
+    --primary-light: #b7ff6419; */
     --secondary: #b5bed8;
 
     /* --background: #FAFAFA;
@@ -32,8 +34,10 @@
 
     --background: #0A192F;
     --foreground: #dde5ff;
-    --primary: #64FFDA;
-    --primary-light: #64ffdb17;
+    --primary: #FF4C29;
+    --primary-light: #ff4d291a;
+    /* --primary: #64FFDA;
+    --primary-light: #64ffdb17; */
     --secondary: #b5bed8;
   }
 }

@@ -140,7 +140,7 @@ export default function InteractiveBackground() {
     }
 
     return (
-        <div className="fixed inset-0 z-10 opacity-50 pointer-events-none">
+        <div className="fixed inset-0 z-1 opacity-50 pointer-events-none">
             <Canvas
                 camera={{ position: new Vector3(0, 0, 5), fov: 80 }}
                 style={{pointerEvents: 'none'}}
