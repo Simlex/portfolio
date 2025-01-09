@@ -25,13 +25,13 @@ export default function About() {
                     <motion.p
                         initial={{ y: 20, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}>
-                        In the past, I&apos;ve had the to develop software across various industries such as finance, healthcare, education and e-commerce -
+                        In the past, I&apos;ve had to develop software across various industries such as finance, healthcare, education and e-commerce -
                         from enterprise applications to consumer-facing applications.
                     </motion.p>
                     <motion.p
                         initial={{ y: 20, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}>
-                        In my spare time, I enjoy reading, beign at the gym, swimming, or thinking about the next big thing I can build.
+                        In my spare time, I enjoy reading, being at the gym, swimming, or thinking about the next big thing I can build.
                     </motion.p>
                 </div>
             </div>
