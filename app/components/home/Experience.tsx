@@ -18,7 +18,7 @@ export default function Experience() {
             link: 'https://events.ticketsdeck.com'
         },
         {
-            date: 'May 2022 - Present',
+            date: 'May 2022 - April 2025',
             roles: [
                 'Engineering Team Lead ~ Xown Solutions',
                 'Senior Engineer',
