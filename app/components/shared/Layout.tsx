@@ -1,6 +1,6 @@
 "use client"
 import React from 'react'
-import InteractiveBackground from './InteractiveBgCopy'
+// import InteractiveBackground from './InteractiveBgCopy'
 
 type Props = {
     children: React.ReactNode
@@ -9,7 +9,7 @@ type Props = {
 export default function Layout({ children }: Props) {
     return (
         <>
-            <InteractiveBackground />
+            {/* <InteractiveBackground /> */}
             {children}
         </>
     )
