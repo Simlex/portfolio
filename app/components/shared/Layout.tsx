@@ -1,16 +1,16 @@
-"use client"
-import React from 'react'
-// import InteractiveBackground from './InteractiveBgCopy'
+"use client";
+import React from "react";
+import InteractiveCursorEffect from "./InteractiveCursorEffect";
 
 type Props = {
-    children: React.ReactNode
-}
+  children: React.ReactNode;
+};
 
 export default function Layout({ children }: Props) {
-    return (
-        <>
-            {/* <InteractiveBackground /> */}
-            {children}
-        </>
-    )
+  return (
+    <>
+      <InteractiveCursorEffect />
+      {children}
+    </>
+  );
 }
