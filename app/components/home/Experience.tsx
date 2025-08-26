@@ -10,7 +10,7 @@ export default function Experience() {
         {
             date: '2023 - Present',
             roles: [
-                'CEO, CTO & Co-Founder ~ Ticketsdeck Events',
+                'Engineering Lead, CTO ~ Ticketsdeck Events',
             ],
             description: `I co-founded Ticketsdeck Events, a platform that connects event organizers with event attendees. 
             I am responsible for the technical direction of the company, ensuring that we are building scalable and reliable software solutions.`,
