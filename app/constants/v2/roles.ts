@@ -8,7 +8,7 @@ export const ROLES: RoleEntry[] = [
         period: 'Dec 2023 - now',
         title: 'Founder and CTO',
         orgName: 'Ticketsdeck',
-        orgHref: 'https://ticketsdeck.com',
+        orgHref: 'https://events.ticketsdeck.com',
         description:
             'I set the technical direction and write most of the code: the web app, the API, the ops console and the company site. I also run the infrastructure.',
     },

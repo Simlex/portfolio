@@ -130,7 +130,8 @@
     text-decoration: none;
     border-bottom: 2px solid #FF4C29;
     padding-bottom: 4px;
-    word-break: break-all;
+    max-width: 100%;
+    overflow-wrap: anywhere;
 }
 
 .v2 .mail:hover {
@@ -190,6 +191,20 @@
 }
 
 @media (max-width: 760px) {
+    .v2 .contact {
+            grid-template-columns: 1fr;
+            gap: 36px;
+            align-items: start;
+        }
+
+    .v2 .contact p {
+            font-size: 1rem;
+        }
+
+    .v2 .mail {
+            margin-top: 22px;
+        }
+
     .v2 .role {
             grid-template-columns: 1fr;
         }
