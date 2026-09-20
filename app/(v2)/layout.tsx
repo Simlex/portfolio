@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { Archivo, JetBrains_Mono } from 'next/font/google';
 import { ThemeProvider } from 'next-themes';
 import CustomCursor from '@/app/components/v2/cursor/CustomCursor';
+import { PROFILE_NAME } from '@/app/constants/v2/profile';
 import SmoothScroll from '@/app/components/v2/scroll/SmoothScroll';
 import '@/app/components/v2/styles/tokens.css';
 import '@/app/components/v2/styles/hero.css';
@@ -21,10 +22,32 @@ const jetBrainsMono = JetBrains_Mono({
     variable: '--font-mono-face',
 });
 
+const SITE_DESCRIPTION: string =
+    'Product engineer and founder. Web apps, mobile apps, APIs and design systems for fintech, events, hiring, hospitality and commerce.';
+
+function siteUrl(): URL {
+    const fromVercel: string | undefined = process.env.NEXT_PUBLIC_SITE_URL ?? process.env.VERCEL_PROJECT_PRODUCTION_URL;
+    if (typeof fromVercel === 'string' && fromVercel.length > 0) {
+        return new URL(fromVercel.startsWith('http') ? fromVercel : `https://${fromVercel}`);
+    }
+    return new URL('http://localhost:8292');
+}
+
 export const metadata: Metadata = {
-    title: 'Similoluwa Afolabi',
-    description:
-        'Product engineer and founder. Web apps, mobile apps, APIs and design systems for fintech, events, hiring, hospitality and commerce.',
+    metadataBase: siteUrl(),
+    title: PROFILE_NAME,
+    description: SITE_DESCRIPTION,
+    openGraph: {
+        type: 'website',
+        title: PROFILE_NAME,
+        description: SITE_DESCRIPTION,
+        siteName: PROFILE_NAME,
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: PROFILE_NAME,
+        description: SITE_DESCRIPTION,
+    },
 };
 
 export default function PortfolioLayout({ children }: Readonly<{ children: React.ReactNode }>): React.ReactElement {
