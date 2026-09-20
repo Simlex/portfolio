@@ -1,13 +1,9 @@
 import type { Metadata } from "next";
-import { Raleway } from "next/font/google";
 import "./globals.css";
-import Layout from "./components/shared/Layout";
-
-const leagueSpartan = Raleway({ display: "swap", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-    title: "Simlex Portfolio Website",
-    description: "Multi-talented business oriented software engineer and designer",
+    title: "Similoluwa Afolabi",
+    description: "Product engineer and designer. Founder and CTO at Ticketsdeck.",
 };
 
 export default function RootLayout({
@@ -16,13 +12,9 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
-            <body
-                className={`${leagueSpartan.className} antialiased`}
-            >
-                <Layout>
-                    {children}
-                </Layout>
+        <html lang="en" suppressHydrationWarning>
+            <body className="antialiased">
+                {children}
             </body>
         </html>
     );
