@@ -1,0 +1,168 @@
+/* Selected work case studies and the Also built cards. */
+
+/* Case studies */
+.v2 .case {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: clamp(24px, 4.5vw, 64px);
+    padding-block: clamp(40px, 6vw, 72px);
+    border-top: 1px solid var(--line);
+    align-items: start;
+}
+
+.v2 .case:first-of-type {
+    border-top: 0;
+    padding-top: 0;
+}
+
+.v2 .shot {
+    margin: 0;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    overflow: hidden;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 88px;
+}
+
+.v2 .shot-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 34px;
+    padding-inline: 12px;
+    background: var(--surface-2);
+    border-bottom: 1px solid var(--line);
+    color: var(--ink-3);
+}
+
+.v2 .shot-bar .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--line);
+}
+
+.v2 .shot-bar .mono {
+    margin-left: 6px;
+    font-size: 11.5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.v2 .shot img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
+
+.v2 .case h3 {
+    margin: 0 0 14px;
+    font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+}
+
+.v2 .pitch {
+    margin: 0 0 20px;
+    font-size: 1.08rem;
+    text-wrap: pretty;
+}
+
+/* Also built */
+.v2 .more {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(16px, 2.5vw, 28px);
+}
+
+.v2 .card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    overflow: hidden;
+    background: var(--surface);
+}
+
+.v2 .card img,
+.v2 .card .panel {
+    aspect-ratio: 16 / 10;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-bottom: 1px solid var(--line);
+}
+
+.v2 .card .panel {
+    background: var(--panel-bg);
+    color: var(--panel-ink-2);
+    padding: clamp(18px, 2vw, 26px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    font-family: var(--mono);
+    font-size: clamp(11px, 1.1vw, 12.5px);
+    line-height: 1.75;
+}
+
+.v2 .card .panel b {
+    color: var(--panel-ink);
+    font-weight: 500;
+}
+
+.v2 .card .panel .k {
+    color: #FF7F63;
+}
+
+.v2 .card .panel .cap {
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.v2 .card-body {
+    padding: 22px clamp(18px, 2.4vw, 26px) 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+.v2 .card h3 {
+    margin: 0;
+    font-size: 1.55rem;
+}
+
+.v2 .card .desc {
+    margin: 0;
+    color: var(--ink-2);
+    font-size: 15.5px;
+    text-wrap: pretty;
+}
+
+.v2 .card .stack,
+.v2 .card .kicker {
+    margin: 0;
+}
+
+.v2 .card .case-foot {
+    margin-top: auto;
+}
+
+@media (max-width: 980px) {
+    .v2 .case {
+            grid-template-columns: 1fr;
+        }
+
+    .v2 .shot {
+            position: static;
+        }
+}
+
+@media (max-width: 860px) {
+    .v2 .more {
+            grid-template-columns: 1fr;
+        }
+}
