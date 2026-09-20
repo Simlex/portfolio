@@ -25,12 +25,15 @@ const jetBrainsMono = JetBrains_Mono({
 const SITE_DESCRIPTION: string =
     'Product engineer and founder. Web apps, mobile apps, APIs and design systems for fintech, events, hiring, hospitality and commerce.';
 
+/** Absolute URLs are baked in at build time, so this must never fall back to localhost: link previews resolve og:image against it. */
+const PRODUCTION_URL: string = 'https://simlexltd.com';
+
 function siteUrl(): URL {
-    const fromVercel: string | undefined = process.env.NEXT_PUBLIC_SITE_URL ?? process.env.VERCEL_PROJECT_PRODUCTION_URL;
-    if (typeof fromVercel === 'string' && fromVercel.length > 0) {
-        return new URL(fromVercel.startsWith('http') ? fromVercel : `https://${fromVercel}`);
+    const configured: string | undefined = process.env.NEXT_PUBLIC_SITE_URL;
+    if (typeof configured === 'string' && configured.length > 0) {
+        return new URL(configured.startsWith('http') ? configured : `https://${configured}`);
     }
-    return new URL('http://localhost:8292');
+    return new URL(PRODUCTION_URL);
 }
 
 export const metadata: Metadata = {
