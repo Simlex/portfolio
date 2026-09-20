@@ -115,8 +115,7 @@
 }
 
 @media (max-width: 760px) {
-    .v2 .hero-grid,
-        .v2 .contact {
+    .v2 .hero-grid {
             grid-template-columns: 1fr;
         }
 
