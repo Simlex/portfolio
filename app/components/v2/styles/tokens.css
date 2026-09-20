@@ -1,0 +1,306 @@
+/* Tokens, base type and shared pieces for the v2 portfolio. Everything is scoped to .v2 so the v1 route keeps its own look. */
+
+.v2 {
+    --bg: #F3F5F9;
+    --surface: #FFFFFF;
+    --surface-2: #E8ECF3;
+    --ink: #0A192F;
+    --ink-2: #3F4D69;
+    --ink-3: #66738E;
+    --line: #D8DEE9;
+    --accent: #D13A18;
+    --accent-ink: #B5310F;
+    --heat-0: #E4E9F1;
+    --on-accent: #FFFFFF;
+    --panel-bg: #0A192F;
+    --panel-ink: #E1E8FB;
+    --panel-ink-2: #A9B5D3;
+    --panel-line: #22385A;
+    --glass-highlight: rgba(255, 255, 255, 0.6);
+    --shadow: 0 1px 2px rgba(10, 25, 47, 0.05), 0 18px 40px -22px rgba(10, 25, 47, 0.35);
+    --display: var(--font-archivo), "Helvetica Neue", Arial, sans-serif;
+    --body: var(--font-archivo), "Helvetica Neue", Arial, sans-serif;
+    --mono: var(--font-mono-face), ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    color-scheme: light;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 16px;
+    line-height: 1.6;
+    font-stretch: 100%;
+    -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .v2 {
+        --bg: #0A192F;
+        --surface: #0E2039;
+        --surface-2: #132A4A;
+        --ink: #E1E8FB;
+        --ink-2: #A9B5D3;
+        --ink-3: #8190B2;
+        --line: #1E3558;
+        --accent: #FF4C29;
+        --accent-ink: #FF7F63;
+        --heat-0: #12284A;
+        --on-accent: #0A192F;
+        --panel-bg: #132A4A;
+        --panel-line: #26406A;
+        --glass-highlight: rgba(255, 255, 255, 0.12);
+        --shadow: 0 1px 2px rgba(0, 0, 0, 0.25), 0 18px 40px -22px rgba(0, 0, 0, 0.6);
+        color-scheme: dark;
+    }
+}
+
+:root[data-theme="dark"] .v2 {
+    --bg: #0A192F;
+    --surface: #0E2039;
+    --surface-2: #132A4A;
+    --ink: #E1E8FB;
+    --ink-2: #A9B5D3;
+    --ink-3: #8190B2;
+    --line: #1E3558;
+    --accent: #FF4C29;
+    --accent-ink: #FF7F63;
+    --heat-0: #12284A;
+    --on-accent: #0A192F;
+    --panel-bg: #132A4A;
+    --panel-line: #26406A;
+    --glass-highlight: rgba(255, 255, 255, 0.12);
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.25), 0 18px 40px -22px rgba(0, 0, 0, 0.6);
+    color-scheme: dark;
+}
+
+html:has(.v2) {
+    scroll-padding-top: 84px;
+}
+
+body:has(.v2) {
+    background: #F3F5F9;
+    overflow-x: clip;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) body:has(.v2) {
+        background: #0A192F;
+    }
+}
+
+:root[data-theme="dark"] body:has(.v2) {
+    background: #0A192F;
+}
+
+.v2 a {
+    color: inherit;
+}
+
+.v2 :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+.v2 .sr {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.v2 .wrap {
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: clamp(16px, 4vw, 40px);
+}
+
+.v2 .display {
+    font-family: var(--display);
+    font-stretch: 125%;
+    font-variation-settings: "wdth" 125;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    line-height: 1.02;
+    text-wrap: balance;
+}
+
+.v2 .mono {
+    font-family: var(--mono);
+    font-size: 12.5px;
+    letter-spacing: 0.01em;
+}
+
+/* Heat shades, shared by the header mark, the legend and the ship log.
+   Every square carries one of these classes, so nothing else may paint their background. */
+.v2 .l0 {
+    background: var(--heat-0);
+}
+
+.v2 .l1 {
+    background: color-mix(in oklab, var(--accent) 22%, var(--heat-0));
+}
+
+.v2 .l2 {
+    background: color-mix(in oklab, var(--accent) 42%, var(--heat-0));
+}
+
+.v2 .l3 {
+    background: color-mix(in oklab, var(--accent) 62%, var(--heat-0));
+}
+
+.v2 .l4 {
+    background: color-mix(in oklab, var(--accent) 82%, var(--heat-0));
+}
+
+.v2 .l5 {
+    background: var(--accent);
+}
+
+.v2 .sec {
+    padding-block: clamp(64px, 9vw, 112px);
+}
+
+.v2 .sec-flush {
+    padding-top: 0;
+}
+
+.v2 .sec-head {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 16px 48px;
+    align-items: end;
+    margin-bottom: clamp(28px, 4vw, 48px);
+}
+
+.v2 .sec-head h2 {
+    margin: 0;
+    font-size: clamp(2rem, 4.6vw, 3.4rem);
+}
+
+.v2 .sec-head p {
+    margin: 0;
+    color: var(--ink-2);
+    max-width: 36em;
+    text-wrap: pretty;
+}
+
+.v2 .kicker {
+    margin: 0 0 10px;
+    color: var(--accent-ink);
+}
+
+.v2 .stack {
+    margin: 0 0 22px;
+    color: var(--ink-3);
+    line-height: 1.8;
+}
+
+.v2 .did {
+    list-style: none;
+    margin: 0 0 22px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.v2 .did li {
+    position: relative;
+    padding-left: 22px;
+    color: var(--ink-2);
+    font-size: 15.5px;
+    line-height: 1.55;
+    text-wrap: pretty;
+}
+
+.v2 .did li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.52em;
+    width: 9px;
+    height: 9px;
+    border-radius: 2px;
+    background: var(--accent);
+    opacity: 0.85;
+}
+
+.v2 .case-foot {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding-top: 18px;
+    border-top: 1px dashed var(--line);
+}
+
+.v2 .case-foot .mono {
+    color: var(--ink-2);
+}
+
+.v2 .ext {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    font-size: 14.5px;
+    color: var(--accent-ink);
+    text-decoration: none;
+}
+
+.v2 .ext:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.v2 .ext svg {
+    width: 15px;
+    height: 15px;
+}
+
+.v2 .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    height: 46px;
+    padding-inline: 20px;
+    border-radius: 999px;
+    background: var(--accent);
+    color: var(--on-accent);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    border: 1px solid var(--accent);
+    transition: transform 0.15s ease;
+}
+
+.v2 .btn:hover {
+    transform: translateY(-1px);
+}
+
+.v2 .btn.ghost {
+    background: transparent;
+    color: var(--ink);
+    border-color: var(--line);
+}
+
+.v2 .btn.ghost:hover {
+    border-color: var(--ink-3);
+}
+
+@media (max-width: 760px) {
+    .v2 .sec-head {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .v2 .btn {
+        transition: none;
+    }
+}

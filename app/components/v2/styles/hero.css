@@ -1,0 +1,136 @@
+/* Hero: name, lede and the headline figures. */
+
+/* Section layouts for the v2 portfolio. */
+
+/* Hero */
+.v2 .hero {
+    padding-block: clamp(48px, 8vw, 104px) clamp(40px, 6vw, 72px);
+}
+
+.v2 .name {
+    margin: 0;
+    font-size: clamp(3rem, 10.4vw, 8.6rem);
+    line-height: 0.9;
+    letter-spacing: -0.035em;
+}
+
+.v2 .name span {
+    display: block;
+}
+
+.v2 .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    gap: clamp(24px, 5vw, 72px);
+    margin-top: clamp(32px, 5vw, 56px);
+    align-items: end;
+}
+
+.v2 .lede {
+    margin: 0;
+    font-size: clamp(1.1rem, 1.6vw, 1.3rem);
+    line-height: 1.55;
+    max-width: 34em;
+    text-wrap: pretty;
+}
+
+.v2 .lede + .lede {
+    margin-top: 14px;
+    color: var(--ink-2);
+    font-size: 1.05rem;
+}
+
+.v2 .hero-side {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.v2 .cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.v2 .socials {
+    display: flex;
+    gap: 6px;
+}
+
+.v2 .socials a {
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    color: var(--ink-2);
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.v2 .socials a:hover {
+    background: var(--surface);
+    color: var(--ink);
+}
+
+.v2 .socials svg {
+    width: 20px;
+    height: 20px;
+}
+
+.v2 .facts {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin: clamp(40px, 6vw, 64px) 0 0;
+    border-top: 1px solid var(--line);
+}
+
+.v2 .facts div {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 4px;
+    padding: 20px 20px 0 0;
+}
+
+.v2 .facts div + div {
+    padding-left: 20px;
+    border-left: 1px solid var(--line);
+}
+
+.v2 .facts dd {
+    margin: 0;
+    font-family: var(--display);
+    font-stretch: 125%;
+    font-variation-settings: "wdth" 125;
+    font-weight: 700;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    letter-spacing: -0.03em;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+}
+
+.v2 .facts dt {
+    color: var(--ink-3);
+    font-size: 14px;
+}
+
+@media (max-width: 760px) {
+    .v2 .hero-grid,
+        .v2 .contact {
+            grid-template-columns: 1fr;
+        }
+
+    .v2 .facts {
+            grid-template-columns: 1fr;
+        }
+
+    .v2 .facts div,
+        .v2 .facts div + div {
+            padding: 16px 0;
+            border-left: 0;
+            border-bottom: 1px solid var(--line);
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+}
