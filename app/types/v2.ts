@@ -33,6 +33,13 @@ export enum IconName {
     Behance = 'behance',
 }
 
+/** Variant names shared by the hero's framer-motion transitions. */
+export enum MotionState {
+    Hidden = 'hidden',
+    Shown = 'shown',
+    Gone = 'gone',
+}
+
 export enum TabIconName {
     Home = 'home',
     ShipLog = 'shiplog',
@@ -130,6 +137,12 @@ export interface ShipLogRow {
 export interface ShipLogData {
     months: string[];
     rows: ShipLogRow[];
+}
+
+export interface Figure {
+    prefix: string;
+    target: number;
+    suffix: string;
 }
 
 export interface YearGroup {
