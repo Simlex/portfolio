@@ -23,7 +23,7 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 const SITE_DESCRIPTION: string =
-    'Product engineer and founder. Web apps, mobile apps, APIs and design systems for fintech, events, hiring, hospitality and commerce.';
+    'Founder, CTO and engineering lead. I lead the teams and technology behind products in events, fintech, trade and logistics, hiring and commerce.';
 
 /** Absolute URLs are baked in at build time, so this must never fall back to localhost: link previews resolve og:image against it. */
 const PRODUCTION_URL: string = 'https://simlexltd.com';

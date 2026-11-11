@@ -23,7 +23,7 @@ export const PROJECTS: ProjectEntry[] = [
     {
         id: 'p-ticketsdeck',
         name: 'Ticketsdeck Events',
-        summary: 'Event ticketing and check-in',
+        summary: 'A platform for building experiences',
         detail: CASE_STUDY_NOTE,
         part: 'Founder, CTO',
         years: '2023 - now',
@@ -39,6 +39,16 @@ export const PROJECTS: ProjectEntry[] = [
         years: '2025 - now',
         categories: [ProjectCategory.Fintech],
         href: '#cashdrive',
+    },
+    {
+        id: 'p-aimpexx',
+        name: 'Aimpexx',
+        summary: 'China sourcing, shipping and import finance',
+        detail: CASE_STUDY_NOTE,
+        part: 'Lead engineer',
+        years: '2026 - now',
+        categories: [ProjectCategory.Commerce, ProjectCategory.Fintech],
+        href: '#aimpexx',
     },
     {
         id: 'p-plugiq',

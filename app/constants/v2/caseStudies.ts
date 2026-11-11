@@ -1,3 +1,4 @@
+import aimpexx from '@/public/images/v2/aimpexx.jpg';
 import cashdrive from '@/public/images/v2/cashdrive.jpg';
 import chequein from '@/public/images/v2/chequein.jpg';
 import mirratal from '@/public/images/v2/mirratal.jpg';
@@ -7,24 +8,24 @@ import ticketsdeck from '@/public/images/v2/ticketsdeck.jpg';
 import type { CaseStudy } from '@/app/types/v2';
 
 export const SELECTED_WORK_INTRO: string =
-    "Six products where I owned the most or went the deepest. For each one I've set out what it does, what I did, and what it runs on.";
+    'Seven products where I carried the most weight, as founder, technical lead or engineer. For each one: the business problem, what we did about it, and what it runs on.';
 
 export const CASE_STUDIES: CaseStudy[] = [
     {
         id: 'ticketsdeck',
-        name: 'Ticketsdeck Events',
-        kicker: 'Events · Founder and CTO · Dec 2023 - now',
-        pitch: 'Self-service ticketing for events in Nigeria. Organizers create an event, sell tiered tickets, check guests in at the door and get paid out. Attendees find something to do, buy in a few taps and share a personalized Pulse Card.',
+        name: 'Ticketsdeck',
+        kicker: 'Experiences and the creator economy · Founder and CTO · Dec 2023 - now',
+        pitch: "A platform for building experiences. It started as self-service ticketing in Nigeria. Now organizers use it to create, sell and run an experience from start to finish, attendees relive and share it long after the night, and creators earn by helping it sell out.",
         highlights: [
-            'Wrote almost all of the web app and every commit of the API behind it.',
-            'Built Paystack checkout with signed webhooks, an hourly retry for failed orders, coupons, wallets and organizer payouts with admin approval.',
-            'Rebuilt door check-in around staff codes, a phone-camera QR scanner and live attendance.',
-            'Shipped Pulse Cards, shareable "I\'m attending" flyers that credit ticket sales back to whoever shared them.',
-            'Built DeckPal, an AI assistant with tools that can set up events, tickets and coupons, buy tickets and auto-escalate issues to support team.',
-            'Run the platform too: an internal ops console, Docker builds, CI to Coolify and database backups.',
+            'I set the direction and lead the technology, and I still write most of the code across the web app, the API and the ops console.',
+            'We took Ticketsdeck to mobile. The iOS and Android app went from first commit to a working build in about five weeks: discovery, in-app checkout, tickets, door check-in, event rooms and push notifications.',
+            "Launched Experiences, short clips from events that people share and react to, so a good night keeps selling the next one. Reporting and a moderation queue keep it safe.",
+            'Opened up a creator economy: organizers run campaigns, creators apply or get invited, agree a collab and earn through their own discount codes.',
+            'Made the money trustworthy as volume grows: Paystack checkout, an append-only ledger checked against balances every night, refunds, and payouts that need two admins to approve.',
+            'Gave organizers more ways to sell: co-hosts, invite-to-buy links, Pulse Cards that credit sales back to whoever shared them, and DeckPal, an AI assistant that sets up events and tickets.',
         ],
-        stack: ['Next.js', 'React', 'TypeScript', 'NestJS', 'Prisma', 'MySQL', 'Socket.io', 'Paystack', 'OpenAI', 'Docker', 'Coolify'],
-        stats: ['4,000+ commits', '4 repos', '120+ events'],
+        stack: ['Next.js', 'React Native', 'Expo', 'TypeScript', 'NestJS', 'Prisma', 'MySQL', 'Socket.io', 'Paystack', 'OpenAI', 'Docker', 'Coolify'],
+        stats: ['4,400+ commits', '6 repos', '120+ events'],
         image: ticketsdeck,
         imageAlt: 'Ticketsdeck Events homepage with the event carousel and a countdown to the next event',
         frameLabel: 'events.ticketsdeck.com',
@@ -36,18 +37,39 @@ export const CASE_STUDIES: CaseStudy[] = [
         kicker: 'Fintech · Lead frontend engineer · Aug 2025 - now',
         pitch: 'Car-backed loans in Nigeria. Car owners borrow against their car, and dealers get credit lines and term loans to finance stock.',
         highlights: [
-            'Own all three frontends: the borrower app, the back-office console and the marketing site. I bootstrapped two of them.',
-            'Built the whole borrower journey: a multi-step application, identity checks, e-signed loan agreements, bank account verification and direct-debit mandates.',
-            'Made repayments fit real life: early payoff quotes, part payments, transfers with receipt upload, wallet payments, rollovers and restructuring.',
-            'Built dealer tools, from the credit line dashboard to term loans that run from offer to closeout.',
-            'Gave the ops team a back-office with review and approval workflows, role-based access, audit trails and exports.',
+            'I own frontend across all four of our apps: the borrower app, the back office, the marketing site and Onboard. I bootstrapped three of them.',
+            "Launched Onboard, an offline-first app our field sales team uses on their phones to sign up dealers. Drafts are encrypted on the device, so a bad connection doesn't lose an application.",
+            'Shipped the whole borrower journey: a multi-step application, identity checks, e-signed loan agreements, bank account verification and direct-debit mandates.',
+            'Made repayments fit real life: early payoff quotes, part payments on any loan, transfers with receipt upload, wallet payments, rollovers and restructuring.',
+            'Gave the ops team what they need to lend with confidence: approval workflows with limits, the Car Liquidity Engine for judging how fast a car will sell, role-based access, audit trails and exports.',
+            'Built the dealer side, from the credit line dashboard to term loans that run from offer to closeout.',
         ],
-        stack: ['Next.js', 'React 19', 'TypeScript', 'Tailwind', 'TanStack Query', 'NextAuth', 'Chart.js', 'GSAP', 'PostHog'],
-        stats: ['2,900+ commits'],
+        stack: ['Next.js', 'React 19', 'TypeScript', 'Tailwind', 'TanStack Query', 'NextAuth', 'PWA', 'Chart.js', 'GSAP', 'PostHog'],
+        stats: ['3,400+ commits', '4 apps'],
         image: cashdrive,
         imageAlt: 'CashDrive homepage headline, Fast cash with your car, above a preview of the borrower dashboard',
         frameLabel: 'cashdrive.co',
         link: { label: 'Visit cashdrive.co', href: 'https://www.cashdrive.co' },
+    },
+    {
+        id: 'aimpexx',
+        name: 'Aimpexx',
+        kicker: 'Trade and logistics · Lead engineer · Oct 2026 - now',
+        pitch: 'Sourcing and shipping from China for businesses in Nigeria and Ghana. Customers find verified suppliers, finance their imports, pay in naira and track every shipment by air and sea.',
+        highlights: [
+            'I lead tech innovation at Aimpexx and use technology to drive growth across Nigeria and Ghana.',
+            'We built the operations console the business runs on in our first month: service requests, shipments, import financing, rates and warehouses in one place.',
+            'Put controls in place so the business can scale safely: maker-checker approvals on high-stakes actions like import financing, role-based access and a full audit trail.',
+            'Set service targets on every customer request, with alerts before anything slips, plus a support desk with tickets, checklists and handoff notes.',
+            'Built an outreach engine that drafts emails, runs sequences, reads replies and sends the team a digest, so sales can work more leads with the same people.',
+            'Added a vehicle financing calculator that exports a branded PDF quote for customers.',
+        ],
+        stack: ['Next.js 16', 'React 19', 'TanStack Query', 'Tailwind', 'NestJS', 'Prisma', 'PostgreSQL', 'Cloudflare R2', 'PWA'],
+        stats: ['130+ commits', '3 repos'],
+        image: aimpexx,
+        imageAlt: 'Aimpexx homepage, Ship quality products from China without the stress, beside a Guangzhou to Lagos shipment tracker',
+        frameLabel: 'aimpexx.com',
+        link: { label: 'Visit aimpexx.com', href: 'https://aimpexx.com' },
     },
     {
         id: 'mirratal',
@@ -55,7 +77,7 @@ export const CASE_STUDIES: CaseStudy[] = [
         kicker: 'Hiring and AI · Sole engineer · Apr 2026 - now',
         pitch: 'AI hiring that looks past the CV. Candidates take a short voice interview with an AI interviewer, get scored against a rubric, and leave with a verified skill badge they can share.',
         highlights: [
-            'Built all four codebases on my own: the NestJS API, a Python voice runtime, the employer and candidate web app, and a staff console.',
+            'Took it from idea to product as the only engineer: the NestJS API, a Python voice runtime, the employer and candidate web app, and a staff console.',
             "The AI interviewer joins the candidate's room, mixes set questions with live follow-ups and keeps to a time budget.",
             'Every interview gets scored against a rubric after the call, with integrity signals and a review queue for flagged sessions.',
             'Added an ATS layer: careers pages, CV parsing that sends strong applicants straight to interview, a pipeline board and scheduling.',
@@ -73,13 +95,14 @@ export const CASE_STUDIES: CaseStudy[] = [
         kicker: 'Fintech and HR · Frontend lead · Jun 2026 - now',
         pitch: "Attendance, payroll and earned wage access for African businesses with shift workers. Employers clock staff in and run payroll, and staff can draw pay they've already earned before payday.",
         highlights: [
-            'Built the employer dashboard from Figma: sign-up and business verification, attendance with a configurable rules engine, payroll runs, wage advances, repayments, a wallet and team permissions.',
-            'Built the product site, the company site and the staff console, including a tiered fee builder with a live preview.',
+            'Led the employer dashboard from Figma to launch: sign-up and business verification, attendance with a configurable rules engine, payroll runs, wage advances, repayments, a wallet and team permissions.',
+            "Brought AI into the product: an assistant that answers questions from a business's own data and draws charts, but only does what the user's permissions allow. It runs on OpenAI or Claude, switched by config.",
             'Led the port of the Laravel API to NestJS against the live database, with shared tokens so both could run side by side. About 35 modules, plus face liveness checks.',
+            'Built the product site, the company site and the staff console, including a tiered fee builder with a live preview.',
             'Audited the platform for security issues and shipped the fixes.',
         ],
-        stack: ['Next.js 16', 'React 19', 'TanStack Query', 'Recharts', 'PostHog', 'NestJS', 'Prisma', 'MySQL', 'Redis'],
-        stats: ['500+ commits', '7 repos'],
+        stack: ['Next.js 16', 'React 19', 'TanStack Query', 'Recharts', 'PostHog', 'NestJS', 'Prisma', 'MySQL', 'Redis', 'OpenAI', 'Anthropic'],
+        stats: ['550+ commits', '7 repos'],
         image: chequein,
         imageAlt: 'ChequeIn homepage with the employer dashboard and mobile app previews',
         frameLabel: 'getchequein.com',
@@ -91,10 +114,11 @@ export const CASE_STUDIES: CaseStudy[] = [
         kicker: 'Events · Sole engineer · Feb 2026 - now',
         pitch: 'Digital invitations for Nigerian celebrations. Hosts build an animated invitation, and guests RSVP, send money gifts, order Aso-ebi and get a QR pass for the door.',
         highlights: [
-            'Built the web app, the FastAPI backend and the admin console on my own.',
+            'Took it from idea to paying hosts as the only engineer: the web app, the FastAPI backend and the admin console.',
             'Made an invitation builder with themes, galleries, music and a wax-seal envelope that opens on arrival.',
             'Designed gift payments to be trusted with real money: a local record before Paystack is ever called, one idempotent settlement path, an append-only ledger and a scheduled reconciliation sweep.',
             'Shipped Aso-ebi ordering end to end, host payouts with fee breakdowns, CSV guest import and a camera QR check-in.',
+            'Gave support the tools to sort out problems without an engineer, from recording payments made outside Paystack to changing how an event is billed.',
         ],
         stack: ['Next.js 16', 'React 19', 'Tailwind', 'FastAPI', 'MongoDB', 'Paystack', 'Cloudinary', 'Resend'],
         stats: ['250+ commits', '3 repos'],

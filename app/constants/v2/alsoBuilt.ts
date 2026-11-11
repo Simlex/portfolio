@@ -12,7 +12,7 @@ export const ALSO_BUILT: ProjectCardEntry[] = [
         name: 'Godofreda',
         kicker: 'Commerce · Technical lead · Feb 2026 - now',
         description:
-            "A shopping app where factories post short videos of what they make and buyers order direct. It's live on iOS and Android. I bootstrapped the Expo app and the NestJS API, merged most of the team's pull requests and built the factory verification pipeline.",
+            "A shopping app where factories post short videos of what they make and buyers order direct. It's live on iOS and Android. I led the engineering team: I bootstrapped the Expo app and the NestJS API, reviewed and merged most of the team's work and built the factory verification pipeline.",
         stack: ['Expo', 'React Native', 'NestJS', 'MongoDB', 'Cloudflare R2'],
         stats: ['100+ commits', '4 repos'],
         image: godofreda,
@@ -58,7 +58,7 @@ export const ALSO_BUILT: ProjectCardEntry[] = [
         name: 'Mozara Autos',
         kicker: 'Commerce · Lead engineer · Apr - Sep 2026',
         description:
-            'A marketplace for cars imported from China to Nigeria, run from Guangzhou and Lagos. I built the site and the admin for leads and stock, English and Chinese versions, and CI/CD to Coolify.',
+            'A marketplace for cars imported from China to Nigeria, run from Guangzhou and Lagos. We launched it in English and Chinese, and I led the build of the site, the admin for leads and stock, and CI/CD to Coolify.',
         stack: ['Next.js 16', 'FastAPI', 'MongoDB', 'Cloudinary', 'Docker'],
         stats: ['30+ commits', '2 repos'],
         image: mozara,

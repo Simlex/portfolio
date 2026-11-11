@@ -2,18 +2,18 @@ import { IconName, type ContactLink, type HeroFact, type SocialLink } from '@/ap
 
 export const PROFILE_NAME: string = 'Similoluwa Afolabi';
 
-export const PROFILE_EYEBROW: string = 'Product engineer · Founder and CTO at Ticketsdeck';
+export const PROFILE_EYEBROW: string = 'Founder and CTO at Ticketsdeck';
 
 export const PROFILE_LEDE: string[] = [
-    'I build software products end to end: the web app, the mobile app, the API behind them, the console that runs them and the design system that keeps it all consistent.',
-    "Right now I'm the founder and CTO of Ticketsdeck, and I lead frontend at CashDrive. Along the way I've built for teams in hiring, payroll, hospitality and commerce across Nigeria, the UK and South Africa.",
+    'I lead the teams and the technology that turn business problems into products people pay for: web and mobile apps, the platforms behind them and the tools that run the business day to day.',
+    "I'm the founder and CTO of Ticketsdeck, where we've grown from ticketing into a platform for building experiences. At Aimpexx I lead tech innovation and use technology to drive growth across Nigeria and Ghana. I also lead frontend at CashDrive, and I've worked with teams in hiring, payroll, hospitality and commerce across Nigeria, the UK and South Africa.",
 ];
 
 export const PROFILE_EMAIL: string = 'similoluwaafolabi@gmail.com';
 
 export const HERO_FACTS: HeroFact[] = [
-    { value: '25+', label: 'products built since 2021' },
-    { value: '23,500+', label: 'commits authored across them' },
+    { value: '25+', label: 'products led or built since 2021' },
+    { value: '24,500+', label: 'commits authored across them' },
     { value: '10k+', label: 'users on Ticketsdeck Events' },
 ];
 
@@ -27,7 +27,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
 export const CONTACT_HEADING: string = 'Got something to build?';
 
 export const CONTACT_BODY: string =
-    "I'm at my best owning a product end to end, or leading the team that does. Tell me what you're working on.";
+    "I'm at my best when I own the outcome: the product, the team behind it and the numbers it has to move. Tell me what you're working on.";
 
 export const CONTACT_LINKS: ContactLink[] = [
     { label: 'Call', value: '+234 806 592 6316', href: 'tel:+2348065926316' },
