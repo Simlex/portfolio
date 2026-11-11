@@ -1,7 +1,7 @@
 // Generated from git history on 2026-09-19 and extended on 2026-11-11: commits authored per month (merges included).
 import type { ShipLogData } from '@/app/types/v2';
 
-export const SHIP_LOG_REPO_COUNT: number = 43;
+export const SHIP_LOG_REPO_COUNT: number = 40;
 
 export const SHIP_LOG: ShipLogData = {
     months: ['2023-12', '2024-01', '2024-02', '2024-03', '2024-04', '2024-05', '2024-06', '2024-07', '2024-08', '2024-09', '2024-10', '2024-11', '2024-12', '2025-01', '2025-02', '2025-03', '2025-04', '2025-05', '2025-06', '2025-07', '2025-08', '2025-09', '2025-10', '2025-11', '2025-12', '2026-01', '2026-02', '2026-03', '2026-04', '2026-05', '2026-06', '2026-07', '2026-08', '2026-09', '2026-10', '2026-11'],
@@ -20,6 +20,5 @@ export const SHIP_LOG: ShipLogData = {
         { name: 'ChequeIn', href: '#chequein', first: 30, total: 582, counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 38, 68, 261, 181, 33, 1] },
         { name: 'HyperFrames', href: '#p-hyperframes', first: 30, total: 18, counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 18, 0, 0, 0, 0, 0] },
         { name: 'Minnt', href: '#p-minnt', first: 30, total: 34, counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 34, 0, 0, 0, 0, 0] },
-        { name: 'Aimpexx', href: '#aimpexx', first: 34, total: 136, counts: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 136, 0] },
     ],
 };
