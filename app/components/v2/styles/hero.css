@@ -1,50 +1,131 @@
-/* Hero: name, lede and the headline figures. */
+/* Hero: a statement-first opener with the name as its byline, then the summary and headline figures. */
 
-/* Section layouts for the v2 portfolio. */
-
-/* Hero */
 .v2 .hero {
+    --hero-ease: cubic-bezier(0.22, 1, 0.36, 1);
     padding-block: clamp(48px, 8vw, 104px) clamp(40px, 6vw, 72px);
 }
 
-.v2 .name {
-    margin: 0;
-    font-size: clamp(3rem, 10.4vw, 8.6rem);
-    line-height: 0.9;
-    letter-spacing: -0.035em;
+.v2 .sig {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 6px 14px;
+    margin: 0 0 clamp(20px, 3vw, 32px);
 }
 
-.v2 .name span {
-    display: block;
+.v2 .sig-name {
+    margin: 0;
+    font-size: clamp(1.3rem, 2.2vw, 1.7rem);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+.v2 .sig .kicker {
+    margin: 0;
+}
+
+.v2 .statement {
+    margin: 0;
+    font-size: clamp(2.2rem, 6.1vw, 5.1rem);
+    line-height: 1;
+    letter-spacing: -0.035em;
+    max-width: 15em;
+}
+
+/* Each word clips its own rise. The padding keeps descenders and ascenders inside the clip. */
+.v2 .mask {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+    padding-block: 0.06em 0.14em;
+    margin-block: -0.06em -0.14em;
+}
+
+.v2 .rise {
+    display: inline-block;
+    transform-origin: 0 100%;
+}
+
+/* The accent line keeps the height of its longest phrase, so the layout never jumps while it cycles. */
+.v2 .rotator {
+    display: grid;
+    color: var(--accent);
+}
+
+.v2 .rotator > span {
+    grid-area: 1 / 1;
+}
+
+.v2 .rotator-sizer {
+    visibility: hidden;
 }
 
 .v2 .hero-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
     gap: clamp(24px, 5vw, 72px);
     margin-top: clamp(32px, 5vw, 56px);
     align-items: end;
 }
 
-.v2 .lede {
+.v2 .summary {
     margin: 0;
-    font-size: clamp(1.1rem, 1.6vw, 1.3rem);
-    line-height: 1.55;
-    max-width: 34em;
-    text-wrap: pretty;
-}
-
-.v2 .lede + .lede {
-    margin-top: 14px;
     color: var(--ink-2);
-    font-size: 1.05rem;
+    font-size: clamp(1.05rem, 1.3vw, 1.15rem);
+    line-height: 1.6;
+    max-width: 38em;
+    text-wrap: pretty;
 }
 
 .v2 .hero-side {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 18px;
     align-items: flex-start;
+}
+
+/* Entrance. Runs in CSS so it plays from the server render, before any script loads.
+   Fill mode is backwards so framer-motion owns the transform once the entrance ends. */
+@keyframes hero-rise {
+    from {
+        transform: translateY(110%) rotate(8deg);
+    }
+}
+
+@keyframes hero-fade {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+        filter: blur(6px);
+    }
+}
+
+.v2 .hero .intro {
+    animation: hero-rise 0.9s var(--hero-ease) backwards;
+    animation-delay: calc(var(--i, 0) * 45ms + 150ms);
+}
+
+.v2 .hero .fade {
+    animation: hero-fade 0.8s var(--hero-ease) backwards;
+}
+
+.v2 .hero .fade-2 {
+    animation-delay: 650ms;
+}
+
+.v2 .hero .fade-3 {
+    animation-delay: 780ms;
+}
+
+.v2 .hero .fade-4 {
+    animation-delay: 920ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .v2 .hero .intro,
+    .v2 .hero .fade {
+        animation: none;
+    }
 }
 
 .v2 .cta {

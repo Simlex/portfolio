@@ -4,10 +4,17 @@ export const PROFILE_NAME: string = 'Similoluwa Afolabi';
 
 export const PROFILE_EYEBROW: string = 'Founder and CTO at Ticketsdeck';
 
-export const PROFILE_LEDE: string[] = [
-    'I lead the teams and the technology that turn business problems into products people pay for: web and mobile apps, the platforms behind them and the tools that run the business day to day.',
-    "I'm the founder and CTO of Ticketsdeck, where we've grown from ticketing into a platform for building experiences. At Aimpexx I lead tech innovation and use technology to drive growth across Nigeria and Ghana. I also lead frontend at CashDrive, and I've worked with teams in hiring, payroll, hospitality and commerce across Nigeria, the UK and South Africa.",
+export const PROFILE_STATEMENT_LEAD: string = 'I lead the teams that turn business problems into';
+
+/** The statement's last line cycles through these once, then settles back on the first. */
+export const PROFILE_STATEMENT_PHRASES: string[] = [
+    'products people pay for',
+    'platforms teams run on',
+    'experiences people share',
 ];
+
+export const PROFILE_SUMMARY: string =
+    "Founder and CTO of Ticketsdeck, a platform for building experiences. At Aimpexx I lead tech innovation and drive growth across Nigeria and Ghana. I also lead frontend at CashDrive, and I've worked with teams in hiring, payroll, hospitality and commerce across Nigeria, the UK and South Africa.";
 
 export const PROFILE_EMAIL: string = 'similoluwaafolabi@gmail.com';
 
