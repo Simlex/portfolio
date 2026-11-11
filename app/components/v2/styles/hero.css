@@ -24,6 +24,22 @@
     margin: 0;
 }
 
+/* Scroll-linked, fed by Lenis through --hero-progress (0 at the top, 1 once the hero has scrolled
+   past) and --hero-skew (degrees of lean from scroll speed). Both default to 0 without Lenis. */
+.v2 .sig {
+    opacity: calc(1 - var(--hero-progress, 0) * 1.4);
+}
+
+.v2 .statement {
+    transform: translate3d(0, calc(var(--hero-progress, 0) * -56px), 0) skewX(calc(var(--hero-skew, 0) * 1deg));
+    transform-origin: 0 100%;
+    transition: transform 0.35s var(--hero-ease);
+}
+
+.v2 .rotator {
+    transform: translate3d(0, calc(var(--hero-progress, 0) * 28px), 0);
+}
+
 .v2 .statement {
     margin: 0;
     font-size: clamp(2.2rem, 6.1vw, 5.1rem);
@@ -125,6 +141,12 @@
     .v2 .hero .intro,
     .v2 .hero .fade {
         animation: none;
+    }
+
+    .v2 .statement,
+    .v2 .rotator {
+        transform: none;
+        transition: none;
     }
 }
 

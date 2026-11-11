@@ -16,18 +16,21 @@ import CountUpFigure from './CountUpFigure';
 import RevealWords from './RevealWords';
 import RotatingPhrase from './RotatingPhrase';
 import ScrambleText from './ScrambleText';
+import ScrollLinkedHero from './ScrollLinkedHero';
 
 const LEAD_WORDS: string[] = PROFILE_STATEMENT_LEAD.split(' ');
 
+const STATEMENT_ID: string = 'hero-statement';
+
 export default function Hero(): React.ReactElement {
     return (
-        <section className="hero wrap" id={SectionId.Top} aria-labelledby="hero-statement">
+        <ScrollLinkedHero labelledBy={STATEMENT_ID}>
             <div className="sig fade">
                 <p className="sig-name display">{PROFILE_NAME}</p>
                 <ScrambleText className="kicker mono" text={PROFILE_EYEBROW} />
             </div>
 
-            <h1 className="statement display" id="hero-statement">
+            <h1 className="statement display" id={STATEMENT_ID}>
                 <span className="sr">{statementLabel(PROFILE_STATEMENT_LEAD, PROFILE_STATEMENT_PHRASES)}</span>
                 <span aria-hidden="true">
                     <RevealWords words={LEAD_WORDS} />
@@ -64,6 +67,6 @@ export default function Hero(): React.ReactElement {
                     </div>
                 ))}
             </dl>
-        </section>
+        </ScrollLinkedHero>
     );
 }

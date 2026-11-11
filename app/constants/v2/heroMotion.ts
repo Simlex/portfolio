@@ -17,6 +17,16 @@ export const SCRAMBLE_GLYPHS: string = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/<>_
 
 export const COUNT_DURATION_S: number = 1.6;
 
+/** The furthest the statement leans, in degrees, however fast the page scrolls. */
+export const MAX_SKEW_DEG: number = 6;
+
+/** Degrees of lean per unit of Lenis velocity. */
+export const SKEW_PER_VELOCITY: number = 0.12;
+
+/** CSS custom properties the scroll hook writes onto the hero for hero.css to read. */
+export const HERO_PROGRESS_VAR: string = '--hero-progress';
+export const HERO_SKEW_VAR: string = '--hero-skew';
+
 /** Spreads each phrase's letters across the word-reveal timeline, in word steps. */
 export const CHAR_DELAY_STEP: number = 0.25;
 
