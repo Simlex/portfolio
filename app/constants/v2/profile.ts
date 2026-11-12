@@ -16,7 +16,7 @@ export const PROFILE_STATEMENT_PHRASES: string[] = [
 export const PROFILE_SUMMARY: string =
     "Founder and CTO of Ticketsdeck, a platform for building experiences. At Aimpexx I lead tech innovation and drive growth across Nigeria and Ghana. I also lead frontend at CashDrive, and I've worked with teams in hiring, payroll, hospitality and commerce across Nigeria, the UK and South Africa.";
 
-export const PROFILE_EMAIL: string = 'similoluwaafolabi@gmail.com';
+export const PROFILE_EMAIL: string = 'hello@simlexltd.com';
 
 export const HERO_FACTS: HeroFact[] = [
     { value: '25+', label: 'products led or built since 2021' },

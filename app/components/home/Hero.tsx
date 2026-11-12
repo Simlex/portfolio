@@ -23,7 +23,7 @@ export default function Hero() {
         },
         {
             name: 'Mail',
-            url: 'mailto:similoluwaafolabi@gmail.com',
+            url: 'mailto:hello@simlexltd.com',
             icons: <Icons.Mail />
         },
         {
