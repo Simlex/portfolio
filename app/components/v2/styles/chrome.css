@@ -30,16 +30,12 @@
     letter-spacing: -0.01em;
 }
 
-.v2 .mark {
-    display: grid;
-    grid-template-columns: repeat(3, 6px);
-    gap: 2px;
-}
-
-.v2 .mark i {
-    width: 6px;
-    height: 6px;
-    border-radius: 1.5px;
+.v2 .brand-avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 0 1px var(--line);
 }
 
 .v2 .nav {

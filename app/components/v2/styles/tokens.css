@@ -134,7 +134,7 @@ body:has(.v2) {
     letter-spacing: 0.01em;
 }
 
-/* Heat shades, shared by the header mark, the legend and the ship log.
+/* Heat shades, shared by the legend and the ship log.
    Every square carries one of these classes, so nothing else may paint their background. */
 .v2 .l0 {
     background: var(--heat-0);
