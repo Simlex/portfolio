@@ -80,7 +80,7 @@ const SMALLEST_PART: Essay = {
             text: 'When we started Ticketsdeck, we thought we were building a ticketing system. Sell the ticket, scan the ticket, pay the organiser. It took a while to see how small that picture was.',
         },
         {
-            text: "For the person attending, the ticket is a receipt. What they're buying is the night itself: who they'll go with, what they'll wear, the photos they'll post, the story they'll tell on Monday. The experience starts the moment they hear about the event, and it carries on long after the doors close.",
+            text: "For the person attending, the ticket is a receipt. What they're really buying is everything that comes with it: who they'll go with, what they'll wear, the photos they'll post, the story they'll tell to everyone. The experience starts the moment they hear about the event, and it carries on long after the doors close.",
         },
         {
             text: "For the organiser, the ticket is one line in a much longer list. They need to find an audience, price fairly, manage vendors, know who's coming, get paid on time and bring the same people back next time. Most of them do this with a patchwork of chats, spreadsheets and bank alerts.",
