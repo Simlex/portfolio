@@ -15,11 +15,11 @@ export const CASE_STUDIES: CaseStudy[] = [
         id: 'ticketsdeck',
         name: 'Ticketsdeck',
         kicker: 'Experiences and the creator economy · Founder and CTO · Dec 2023 - now',
-        pitch: "A platform for building experiences. It started as self-service ticketing in Nigeria. Now organizers use it to create, sell and run an experience from start to finish, attendees relive and share it long after the night, and creators earn by helping it sell out.",
+        pitch: "A platform for building experiences. It started as self-service ticketing in Nigeria. Now organizers use it to create, sell and run an experience from start to finish, attendees relive and share it long after it ends, and creators earn by helping it sell out.",
         highlights: [
             'I set the direction and lead the technology, and I still write most of the code across the web app, the API and the ops console.',
             'We took Ticketsdeck to mobile. The iOS and Android app went from first commit to a working build in about five weeks: discovery, in-app checkout, tickets, door check-in, event rooms and push notifications.',
-            "Launched Experiences, short clips from events that people share and react to, so a good night keeps selling the next one. Reporting and a moderation queue keep it safe.",
+            "Launched Experiences, short clips from events that people share and react to, so a good event keeps selling the next one. Reporting and a moderation queue keep it safe.",
             'Opened up a creator economy: organizers run campaigns, creators apply or get invited, agree a collab and earn through their own discount codes.',
             'Made the money trustworthy as volume grows: Paystack checkout, an append-only ledger checked against balances every night, refunds, and payouts that need two admins to approve.',
             'Gave organizers more ways to sell: co-hosts, invite-to-buy links, Pulse Cards that credit sales back to whoever shared them, and DeckPal, an AI assistant that sets up events and tickets.',
