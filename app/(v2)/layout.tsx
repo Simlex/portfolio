@@ -11,6 +11,7 @@ import '@/app/components/v2/styles/shiplog.css';
 import '@/app/components/v2/styles/work.css';
 import '@/app/components/v2/styles/projectIndex.css';
 import '@/app/components/v2/styles/profile.css';
+import '@/app/components/v2/styles/leader.css';
 import '@/app/components/v2/styles/chrome.css';
 
 const archivo = Archivo({ subsets: ['latin'], axes: ['wdth'], display: 'swap', variable: '--font-archivo' });
@@ -23,7 +24,7 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 const SITE_DESCRIPTION: string =
-    'Founder, CTO and engineering lead. I lead the teams and technology behind products in events, fintech, trade and logistics, hiring and commerce.';
+    'Founder and CTO. I build companies and lead the teams behind them, and I write about trust in African commerce, the experience economy and small teams.';
 
 /** Absolute URLs are baked in at build time, so this must never fall back to localhost: link previews resolve og:image against it. */
 const PRODUCTION_URL: string = 'https://simlexltd.com';

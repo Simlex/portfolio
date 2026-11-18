@@ -44,6 +44,7 @@
 
 .v2 .nav {
     display: flex;
+    align-items: center;
     gap: clamp(12px, 2.4vw, 28px);
     margin-left: auto;
     font-size: 14px;
@@ -56,6 +57,19 @@
 
 .v2 .nav a:hover {
     color: var(--ink);
+}
+
+/* The one header link that leaves the page, set apart from the section links. */
+.v2 .nav .nav-route {
+    align-self: center;
+    padding: 4px 10px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    color: var(--ink);
+}
+
+.v2 .nav .nav-route:hover {
+    border-color: var(--ink-3);
 }
 
 .v2 .theme {

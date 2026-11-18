@@ -18,7 +18,7 @@ export default function usePhraseRotation(count: number, isEnabled: boolean, isP
     const [steps, setSteps] = useState<number>(0);
 
     useEffect(() => {
-        if (!isEnabled || isPaused || steps >= count) {
+        if (!isEnabled || isPaused || count < 2 || steps >= count) {
             return;
         }
         const delay = steps === 0 ? ROTATION_FIRST_DELAY_MS : ROTATION_INTERVAL_MS;

@@ -2,11 +2,10 @@
 
 import React from 'react';
 import { LayoutGroup, motion } from 'framer-motion';
-import { TAB_ITEMS } from '@/app/constants/v2/sections';
 import useActiveSection from '@/app/hooks/useActiveSection';
 import useCompactOnScroll from '@/app/hooks/useCompactOnScroll';
 import usePrefersReducedMotion from '@/app/hooks/usePrefersReducedMotion';
-import type { TabItem } from '@/app/types/v2';
+import type { SectionTabMap, TabItem } from '@/app/types/v2';
 import TabIcon from './tabIcons';
 
 /** Close to the iOS tab bar: quick, slightly springy, no overshoot worth noticing. */
@@ -22,7 +21,7 @@ function Tab({ tab, isActive, isStill }: TabProps): React.ReactElement {
     return (
         <motion.a
             className="tab"
-            href={`#${tab.id}`}
+            href={tab.route ?? `#${tab.id}`}
             aria-current={isActive ? 'location' : undefined}
             whileTap={isStill ? undefined : { scale: 0.92 }}
         >
@@ -39,16 +38,21 @@ function Tab({ tab, isActive, isStill }: TabProps): React.ReactElement {
     );
 }
 
-export default function MobileTabBar(): React.ReactElement {
-    const active = useActiveSection();
+interface MobileTabBarProps {
+    tabs: TabItem[];
+    sectionTab: SectionTabMap;
+}
+
+export default function MobileTabBar({ tabs, sectionTab }: Readonly<MobileTabBarProps>): React.ReactElement {
+    const active = useActiveSection(sectionTab);
     const isCompact = useCompactOnScroll();
     const isStill = usePrefersReducedMotion();
 
     return (
         <nav className="tabbar" data-compact={isCompact} aria-label="Sections">
             <LayoutGroup>
-                {TAB_ITEMS.map((tab) => (
-                    <Tab key={tab.id} tab={tab} isActive={tab.id === active} isStill={isStill} />
+                {tabs.map((tab) => (
+                    <Tab key={tab.label} tab={tab} isActive={tab.id === active} isStill={isStill} />
                 ))}
             </LayoutGroup>
         </nav>
