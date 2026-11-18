@@ -22,6 +22,8 @@ export const PROFILE_ROLES: string[] = [
 
 export const PROFILE_EMAIL: string = 'hello@simlexltd.com';
 
+export const MEDIA_KIT_URL: string = 'https://drive.google.com/drive/folders/1jZCBrlgrySgpO0HDG8VTHaWyb5Io7KRR?usp=sharing';
+
 const MAILTO: string =`mailto:${PROFILE_EMAIL}`;
 
 const EMAIL_LABEL: string = 'Email me';
@@ -87,4 +89,5 @@ export const CONTACT_LINKS: ContactLink[] = [
     { label: 'GitHub', value: '@simlex', href: 'https://github.com/simlex' },
     { label: 'X', value: '@simlex_x', href: 'https://x.com/simlex_x' },
     { label: 'Behance', value: 'simlexdesigns', href: 'https://www.behance.net/simlexdesigns' },
+    { label: 'Media kit', value: 'bio and photos', href: MEDIA_KIT_URL },
 ];
