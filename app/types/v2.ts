@@ -2,6 +2,8 @@ import type { StaticImageData } from 'next/image';
 
 export enum SectionId {
     Top = 'top',
+    Themes = 'themes',
+    Books = 'books',
     ShipLog = 'shiplog',
     Work = 'work',
     More = 'more',
@@ -9,6 +11,20 @@ export enum SectionId {
     Roles = 'roles',
     Toolkit = 'toolkit',
     Contact = 'contact',
+}
+
+export enum RoutePath {
+    Home = '/',
+    Dev = '/dev',
+    Thinking = '/thinking',
+}
+
+export enum EssaySlug {
+    WorstDay = 'a-payment-system-is-only-as-good-as-its-worst-day',
+    StartByHand = 'start-by-hand-then-let-the-system-take-over',
+    SmallestPart = 'a-ticket-is-the-smallest-part-of-an-experience',
+    TeamOfSix = 'what-a-team-of-six-can-ship',
+    Character = 'character-comes-before-competence',
 }
 
 export enum ProjectCategory {
@@ -42,6 +58,9 @@ export enum MotionState {
 
 export enum TabIconName {
     Home = 'home',
+    Themes = 'themes',
+    Books = 'books',
+    Engineering = 'engineering',
     ShipLog = 'shiplog',
     Work = 'work',
     Roles = 'roles',
@@ -161,6 +180,67 @@ export interface NavItem {
     label: string;
 }
 
-export interface TabItem extends NavItem {
+/** A tab either scrolls to a section on this page or opens another route. */
+export interface TabItem {
+    label: string;
     icon: TabIconName;
+    id?: SectionId;
+    route?: RoutePath;
+}
+
+/** The sections a page watches for scroll position, and the tab each one lights up. */
+export type SectionTabMap = Partial<Record<SectionId, SectionId>>;
+
+export interface HeroCta extends SiteLink {
+    isGhost?: boolean;
+}
+
+export interface HeroContent {
+    statementLead: string;
+    statementPhrases: string[];
+    summary: string;
+    ctas: HeroCta[];
+    facts: HeroFact[];
+}
+
+export interface ContactCopy {
+    heading: string;
+    body: string;
+}
+
+export interface ThemeProof {
+    source: string;
+    title: string;
+    detail: string;
+    figure: string;
+}
+
+export interface ThemeChapter {
+    id: string;
+    kicker: string;
+    title: string;
+    thesis: string;
+    proof: ThemeProof;
+    essays: EssaySlug[];
+}
+
+/** One paragraph of an essay. A lead is the bold opening phrase of a point. */
+export interface EssayBlock {
+    text: string;
+    lead?: string;
+}
+
+export interface Essay {
+    slug: EssaySlug;
+    kicker: string;
+    title: string;
+    summary: string;
+    readTime: string;
+    blocks: EssayBlock[];
+}
+
+export interface Book {
+    title: string;
+    author: string;
+    isCurrent?: boolean;
 }

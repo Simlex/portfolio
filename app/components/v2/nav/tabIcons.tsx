@@ -38,6 +38,32 @@ function RolesIcon(): React.ReactElement {
     );
 }
 
+function ThemesIcon(): React.ReactElement {
+    return (
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 2.6a7.2 7.2 0 0 0-4.3 12.98c.5.38.8.95.8 1.56v.36c0 .5.4.9.9.9h5.2c.5 0 .9-.4.9-.9v-.36c0-.61.3-1.18.8-1.56A7.2 7.2 0 0 0 12 2.6Z" />
+            <path d="M9.6 19.9h4.8a.6.6 0 0 1 .58.76A2.3 2.3 0 0 1 12.76 22.4h-1.52a2.3 2.3 0 0 1-2.22-1.74.6.6 0 0 1 .58-.76Z" />
+        </svg>
+    );
+}
+
+function BooksIcon(): React.ReactElement {
+    return (
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M11.2 5.5A9.6 9.6 0 0 0 4.1 3.9a1.3 1.3 0 0 0-1.1 1.28v11.5c0 .76.66 1.34 1.4 1.26a8.3 8.3 0 0 1 6.8 2.02V5.5Z" />
+            <path d="M12.8 5.5v14.46a8.3 8.3 0 0 1 6.8-2.02 1.27 1.27 0 0 0 1.4-1.26V5.18a1.3 1.3 0 0 0-1.1-1.28 9.6 9.6 0 0 0-7.1 1.6Z" opacity="0.6" />
+        </svg>
+    );
+}
+
+function EngineeringIcon(): React.ReactElement {
+    return (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="m8.5 7.5-4.5 4.5 4.5 4.5M15.5 7.5l4.5 4.5-4.5 4.5" />
+        </svg>
+    );
+}
+
 function ContactIcon(): React.ReactElement {
     return (
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -49,6 +75,9 @@ function ContactIcon(): React.ReactElement {
 
 const TAB_ICONS: Record<TabIconName, () => React.ReactElement> = {
     [TabIconName.Home]: HomeIcon,
+    [TabIconName.Themes]: ThemesIcon,
+    [TabIconName.Books]: BooksIcon,
+    [TabIconName.Engineering]: EngineeringIcon,
     [TabIconName.ShipLog]: ShipLogIcon,
     [TabIconName.Work]: WorkIcon,
     [TabIconName.Roles]: RolesIcon,

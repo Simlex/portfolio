@@ -13,6 +13,9 @@ export const ROTATION_INTERVAL_MS: number = 2600;
 
 export const SCRAMBLE_DURATION_MS: number = 900;
 
+/** How long each role holds beside the name before it decodes into the next. */
+export const ROLE_INTERVAL_MS: number = 3200;
+
 export const SCRAMBLE_GLYPHS: string = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/<>_+';
 
 export const COUNT_DURATION_S: number = 1.6;

@@ -1,20 +1,24 @@
 import React from 'react';
-import { CONTACT_BODY, CONTACT_HEADING, CONTACT_LINKS, PROFILE_EMAIL } from '@/app/constants/v2/profile';
-import { SectionId } from '@/app/types/v2';
+import { CONTACT_LINKS, PROFILE_EMAIL } from '@/app/constants/v2/profile';
+import { SectionId, type ContactCopy } from '@/app/types/v2';
 
 function isExternal(href: string): boolean {
     return href.startsWith('http');
 }
 
-export default function Contact(): React.ReactElement {
+interface ContactProps {
+    copy: ContactCopy;
+}
+
+export default function Contact({ copy }: Readonly<ContactProps>): React.ReactElement {
     return (
         <section className="wrap" id={SectionId.Contact} aria-labelledby="contact-heading">
             <div className="contact">
                 <div>
                     <h2 className="display" id="contact-heading">
-                        {CONTACT_HEADING}
+                        {copy.heading}
                     </h2>
-                    <p>{CONTACT_BODY}</p>
+                    <p>{copy.body}</p>
                     <a className="mail" href={`mailto:${PROFILE_EMAIL}`}>
                         {PROFILE_EMAIL}
                     </a>
